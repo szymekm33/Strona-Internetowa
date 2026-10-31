@@ -23,6 +23,16 @@ Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze u
 
 Wymagania szczegółowe dla menu, widoków kalendarza, hover i animowanych serc są w `docs/UI_UX.md`. Nie zastępuj ich własnymi domysłami i nie implementuj na raz całego zakresu.
 
+## Referencja wizualna: zaakceptowany prototyp v2
+
+Użytkownik zaakceptował prototyp `razem-prototyp-v2.html` z czatu „Wygląd i obsługa” 2026-10-31. To nie jest tylko pomysł: istnieje interaktywny plik z działającymi animacjami. **Jego oryginalna zawartość nie została jeszcze dodana do repozytorium.**
+
+- Szczegóły i status: `docs/UI_UX.md`.
+- Gdy plik `design/razem-prototyp-v2.html` pojawi się lokalnie, **przeczytaj go i użyj jako wzorca** przed implementacją zaawansowanego wyglądu; nie twórz arbitralnie odmiennego projektu.
+- Dopóki pliku brakuje, nie twierdź, że znasz dokładnie oryginalne animacje i proporcje. Zaproponuj kontynuację małych ćwiczeń lub poproś użytkownika o przeniesienie oryginału do wskazanej ścieżki.
+- Sam HTML jest wyłącznie prototypem bez backendu. Docelowy kod ma być wdrażany stopniowo w React/Next.js i zachowywać tryb nauki, nie przez bezrefleksyjne przekopiowanie całości.
+- Uzgodniony w prototypie jest też przełącznik trybu jasnego/ciemnego; sposób jego implementacji w aplikacji dopracuj na podstawie oryginału.
+
 ## Najbliższe zadanie z Codexem: pierwszy interfejs
 
 1. Najpierw pokaż użytkownikowi, które elementy dotychczasowej strony są jedynie starterem Next.js; nie usuwaj świadomie dodanych przez niego treści bez uzgodnienia.
