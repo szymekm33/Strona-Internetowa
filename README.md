@@ -4,9 +4,9 @@ Prywatna strona dla Szymka i jego dziewczyny: wspólny kalendarz, wspomnienia, c
 
 ## Stan projektu
 
-Rozpoczynamy przygotowanie pierwszej wersji uruchamianej lokalnie. W repozytorium jest dokumentacja startowa; aplikacja nie została jeszcze zaimplementowana.
+Szkielet aplikacji Next.js 16.4.3 (React, TypeScript, Tailwind CSS) działa lokalnie i jest zapisany w repozytorium. Uczymy się teraz tworzenia interfejsu: pierwsza strona, sidebar i prototyp kalendarza. Pełne funkcje, logowanie i baza danych nie są jeszcze gotowe.
 
-Technologie, baza danych i sposób logowania wymagają wyboru. Hosting nie jest warunkiem rozpoczęcia prac. Nie utworzono płatnych usług ani wdrożenia internetowego.
+Planujemy PostgreSQL, ale sposób uwierzytelniania, ORM i migracje wymagają decyzji. Hosting nie jest warunkiem rozpoczęcia prac. Nie utworzono płatnych usług ani wdrożenia internetowego.
 
 ## Pierwszy działający fragment
 
@@ -28,4 +28,4 @@ Roboczy zakres pierwszego etapu:
 
 „Plan główny” służy koordynacji. Szczegóły ustalamy w czatach tematycznych, a aktualne decyzje zapisujemy w tym repozytorium. Codex korzysta z dokumentacji przy implementacji.
 
-Instrukcja instalacji i uruchomienia pojawi się po wyborze technologii i dodaniu działającego kodu.
+Uruchomienie lokalne: zainstaluj Node.js, wykonaj `npm ci`, następnie `npm run dev` i otwórz `http://localhost:3000`. Przed zmianami z Codexem sprawdź `AGENTS.md` oraz `docs/TASKS.md`. Projekt ma służyć także nauce samodzielnego programowania.
