@@ -6,7 +6,7 @@ Stan na 2026-10-31. Dokument zbiera ustalenia produktu. Szczegóły techniczne i
 
 Prywatna strona dla dwóch osób, z oddzielnymi kontami. Rejestracja nie jest otwarta. Dostęp do danych i zdjęć mają wyłącznie uprawnieni, zalogowani użytkownicy.
 
-Głównym urządzeniem jest komputer; interfejs ma być użyteczny także na telefonie. Styl: minimalistyczny, przyjazny, osobisty, z kolorem i dobrymi ustawieniami domyślnymi. Zatwierdzono paletę kolorów i model nawigacji (poniżej); szczegóły konkretnych ekranów pozostają do doprojektowania.
+Głównym urządzeniem jest komputer; interfejs ma być użyteczny także na telefonie. Styl: minimalistyczny, przyjazny, osobisty, z kolorem i dobrymi ustawieniami domyślnymi. Zatwierdzono paletę kolorów, model nawigacji i część interakcji kalendarza. Szczegóły zapisano w [UI_UX.md](UI_UX.md); pozostałe zachowania konkretnych ekranów pozostają do doprojektowania.
 
 ### Wspólna przestrzeń i wygląd
 
