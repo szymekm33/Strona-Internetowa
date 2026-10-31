@@ -19,6 +19,8 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 
 ## Etap nauki — interfejs bez bazy (przed pełnym MVP)
 
+Wymagania wyglądu i interakcji opisano w [UI_UX.md](UI_UX.md).
+
 - [ ] Uporządkować `app/page.tsx`, zachowując napisane samodzielnie elementy; usunąć domyślne przyciski i zbędne treści Next.js.
 - [ ] Ustawić zatwierdzoną paletę i podstawową strukturę strony.
 - [ ] Zrobić komponent `Sidebar` z ikonami w kafelkach i rozwijaniem na hover.
