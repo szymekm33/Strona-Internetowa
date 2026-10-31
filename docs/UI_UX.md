@@ -2,6 +2,24 @@
 
 Stan: 2026-10-31. Źródło decyzji: czat projektowy „Wygląd i obsługa UI UX” oraz ustalenia dotyczące kalendarza. Dokument stanowi **specyfikację dla implementacji**, nie oznacza, że funkcje już działają.
 
+## 0. Zaakceptowany prototyp referencyjny — ważne
+
+W czacie projektowym „Wygląd i obsługa UI UX” powstały dwa lokalne prototypy HTML:
+- `razem-prototyp.html` — wersja v1.0;
+- **`razem-prototyp-v2.html` — wersja v2.0, zaakceptowana przez użytkownika 2026-10-31 jako aktualny wzorzec wyglądu.**
+
+**Stan pliku źródłowego:** oryginalny HTML v2 **nie jest jeszcze dodany do tego repozytorium**. Docelowa ścieżka po skopiowaniu: `design/razem-prototyp-v2.html`. Nie twierdź, że masz dostęp do oryginalnego kodu lub znasz dokładne wartości animacji, dopóki faktycznie nie znajdziesz tego pliku.
+
+Z dotychczasowych ustaleń wynika, że prototyp v2 demonstruje: sidebar z kafelkami i rozwijaniem na hover, wyraźną paletę fioletowo-lawendowo-różową, animowane serca, widoki miesiąca/tygodnia/dnia, filtry kalendarzy, autorów wydarzeń, priorytety, oraz przełączanie jasnego/ciemnego motywu. Prototyp działał lokalnie jako interaktywny HTML z danymi testowymi, **bez backendu i trwałości danych**.
+
+**Po dodaniu pliku do repozytorium:**
+1. Przeczytaj oryginalny HTML, CSS i JavaScript, uruchom go lokalnie i porównaj efekt wizualny ze specyfikacją.
+2. Traktuj go jako **główne źródło szczegółów wyglądu i animacji**, a ten dokument jako listę zatwierdzonych wymagań i ich kontekstu.
+3. Przenieś stopniowo wygląd i zachowania do komponentów React/Next.js, ucząc użytkownika i nie nadpisując jego pracy. Nie kopiuj całego monolitycznego HTML jako gotowej aplikacji produkcyjnej.
+4. Zachowaj oryginalny plik nienaruszony jako referencję. Jeśli między prototypem a późniejszą jawną decyzją użytkownika jest różnica, poproś o rozstrzygnięcie przed zmianą docelowego projektu.
+
+**Do czasu dodania pliku** można kontynuować tylko ćwiczenia podstaw JSX/Tailwind i ogólne elementy UI na podstawie zatwierdzonej palety. Nie deklaruj wiernego odtworzenia zatwierdzonego prototypu.
+
 ## 1. Kierunek wizualny
 
 - Prywatna strona dla dwojga: styl minimalistyczny, ale przyjazny, ciepły i wyraźnie kolorowy.
