@@ -1,6 +1,6 @@
 # Zadania i postępy
 
-Stan na 2026-10-30.
+Stan na 2026-10-31.
 
 Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej implementacji.
 
@@ -10,16 +10,26 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 - [x] Utworzono prywatne repozytorium.
 - [x] Podzielono pracę na czaty tematyczne.
 - [x] Przygotowano dokumentację startową i kryteria pierwszej lokalnej wersji.
-- [ ] Zatwierdzić technologie aplikacji, silnik bazy i sposób lokalnego uruchamiania.
+- [x] Wybrać Next.js (React, TypeScript, Tailwind CSS) i uruchomić lokalnie; PostgreSQL zaplanowany, lecz konfiguracja bazy i migracji jeszcze otwarta.
 - [ ] Ustalić tworzenie dwóch kont oraz logowanie.
 - [ ] Doprecyzować minimalny model danych i formularz wydarzenia.
 - [ ] Uzgodnić pierwszy widok dnia.
 
-**Następne zadanie:** w czacie „Architektura i baza danych” wybrać technologię oraz zaprojektować lokalne uruchomienie, korzystając z tej dokumentacji. Hosting pozostaje otwartą decyzją na późniejszy etap.
+**Następne zadanie dla Codexa (etap nauki):** usunąć starterowe elementy Next.js, nadać stronie naszą paletę, zbudować prosty sidebar z kafelkami i miejscem na widok kalendarza. Robić to w małych iteracjach z samodzielnym pisaniem kodu przez użytkownika. Następnie wizualny prototyp kalendarza na danych przykładowych. Hosting pozostaje na później.
+
+## Etap nauki — interfejs bez bazy (przed pełnym MVP)
+
+- [ ] Uporządkować `app/page.tsx`, zachowując napisane samodzielnie elementy; usunąć domyślne przyciski i zbędne treści Next.js.
+- [ ] Ustawić zatwierdzoną paletę i podstawową strukturę strony.
+- [ ] Zrobić komponent `Sidebar` z ikonami w kafelkach i rozwijaniem na hover.
+- [ ] Dodać główny obszar „Plan dnia” z przykładowymi, wyraźnie testowymi wydarzeniami.
+- [ ] Przećwiczyć JSX, komponenty, propsy i klasy Tailwind; sprawdzić wygląd na laptopie i w węższym oknie.
+
+To jest prototyp UI, **nie** działająca autoryzacja, baza danych ani gotowy kalendarz.
 
 ## Etap 1 — pierwsza działająca wersja lokalna
 
-- [ ] Utworzyć projekt w wybranej technologii.
+- [x] Utworzyć i lokalnie uruchomić projekt Next.js; wysłać szkielet na GitHuba.
 - [ ] Dodać lokalną bazę oraz sposób tworzenia i aktualizowania jej struktury.
 - [ ] Przygotować dwa konta i logowanie, bez publicznej rejestracji.
 - [ ] Ograniczyć odczyt i zapis danych do zalogowanych, uprawnionych kont.
