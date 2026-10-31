@@ -17,6 +17,14 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 
 **Następne zadanie dla Codexa (etap nauki):** usunąć starterowe elementy Next.js, nadać stronie naszą paletę, zbudować prosty sidebar z kafelkami i miejscem na widok kalendarza. Robić to w małych iteracjach z samodzielnym pisaniem kodu przez użytkownika. Następnie wizualny prototyp kalendarza na danych przykładowych. Hosting pozostaje na później.
 
+## Wzorzec interfejsu (prototyp v2)
+
+- [x] Użytkownik zaakceptował prototyp `razem-prototyp-v2.html` w czacie „Wygląd i obsługa” (2026-10-31).
+- [ ] **Przenieść oryginalny plik** do repozytorium jako `design/razem-prototyp-v2.html` (bez sekretów i prawdziwych danych).
+- [ ] Porównać HTML/CSS/JS prototypu z `docs/UI_UX.md`; wdrażać stopniowo jego zachowanie w React.
+
+Dopóki HTML nie jest dostępny w repozytorium, opis UX to tylko tekstowy wzorzec i nie umożliwia wiernej rekonstrukcji wszystkich animacji.
+
 ## Etap nauki — interfejs bez bazy (przed pełnym MVP)
 
 Wymagania wyglądu i interakcji opisano w [UI_UX.md](UI_UX.md).
