@@ -1,6 +1,6 @@
 # Decyzje i kwestie otwarte
 
-Stan na 2026-10-30. Odróżniamy ustalenia produktu od roboczej kolejności implementacji.
+Stan na 2026-10-31. Odróżniamy ustalenia produktu od roboczej kolejności implementacji.
 
 ## Ustalone kierunki produktu
 
@@ -12,22 +12,25 @@ Stan na 2026-10-30. Odróżniamy ustalenia produktu od roboczej kolejności impl
 | D-004 | Wspomnienia mają osobne wpisy z autorami oraz konfigurowalne okładki albumów. |
 | D-005 | Marzenie, planowany wyjazd, wydarzenie i wspomnienie są osobnymi, opcjonalnie powiązanymi obiektami. |
 | D-006 | Przypomnienia o wydarzeniach poprzedzają integrację Gmaila. |
-| D-007 | Kierunek wizualny: minimalistyczny, przyjazny i osobisty. Dokładny wygląd jest otwarty. |
+| D-007 | Paleta: menu #8B50E6, kafelki #A977F2, aktywny #DEC4FF, tło #E9D5FF, karty #FFC4E4, tekst #3D185C, mocny różowy #FF4FA3 poza menu. Sidebar wąski z ikonami w kafelkach, rozwijany na hover. Szczegóły ekranów dalej projektujemy. |
 | D-008 | Prace mogą rozpocząć się lokalnie, bez czekania na hosting. |
 | D-009 | Plan i specyfikacje powstają w czatach tematycznych i dokumentacji repozytorium; implementacja z Codexem. |
+| D-010 | Dwa osobne konta, wszystkie dane wspólne i widoczne dla obu. Autor i uczestnicy wydarzenia są niezależnymi informacjami; brak prywatnych wpisów. |
+| D-011 | Wiele kalendarzy (m.in. AGH, wspólny, ważne daty), domyślnie połączony widok wszystkich i możliwość filtrowania. „Wspólny” to osobny kalendarz, a nie agregat. |
+| D-012 | Frontend i backend w jednym projekcie Next.js (App Router) + React + TypeScript + Tailwind CSS. Lokalny szkielet działa; PostgreSQL jest planowany na kolejny etap, wybór ORM i uwierzytelniania nadal otwarty. |
+| D-013 | Użytkownik uczy się programowania poprzez wspólne pisanie z Codexem. Najpierw małe kroki interfejsu, później prototyp kalendarza i po doprecyzowaniu modelu danych — trwały zapis i logowanie. |
 
 ## Plan roboczy
 
 Pierwszy działający fragment: dwa konta, logowanie, kalendarz dnia i ręczne dodawanie wydarzeń osobistych oraz wspólnych. Kryteria odbioru opisano w [TASKS.md](TASKS.md).
 
-Dokumentacja startowa porządkuje ustalenia. Nie stanowi potwierdzenia gotowego kodu ani wyboru technologii.
+Szkielet Next.js działa lokalnie i został wypchnięty na GitHuba; nie oznacza to jeszcze zaimplementowanych funkcji. Przed pełnym MVP realizujemy krótki etap edukacyjny: layout, sidebar i wizualny prototyp kalendarza bez prawdziwych danych.
 
 ## Kwestie otwarte przed implementacją fundamentu
 
 | ID | Do rozstrzygnięcia | Miejsce ustaleń |
 | --- | --- | --- |
-| O-001 | Technologie aplikacji i lokalny sposób uruchamiania | Architektura i baza danych |
-| O-002 | Silnik bazy i sposób zarządzania zmianami jej struktury | Architektura i baza danych |
+| O-002 | Potwierdzenie konfiguracji PostgreSQL, wybór ORM i sposób zarządzania migracjami | Architektura i baza danych |
 | O-003 | Utworzenie dwóch kont, logowanie i sesje | Architektura i baza danych |
 | O-004 | Minimalny model użytkowników, wydarzeń i uczestników | Architektura i baza danych |
 | O-005 | Formularz wydarzenia, kolizje terminów i uprawnienia edycji | Kalendarz |
