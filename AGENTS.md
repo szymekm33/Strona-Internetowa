@@ -2,7 +2,7 @@
 
 ## Kontekst
 
-Prywatna strona dla dwóch osób. Przed zmianami przeczytaj README.md, docs/SPEC.md, docs/DECISIONS.md oraz docs/TASKS.md.
+Prywatna strona dla dwóch osób. Przed zmianami przeczytaj README.md, docs/SPEC.md, docs/DECISIONS.md, docs/TASKS.md oraz **docs/UI_UX.md** (źródło szczegółowych decyzji wizualnych).
 
 Rozmowy tematyczne służą ustaleniom; aktualne wymagania potrzebne do implementacji należy utrwalać w repozytorium.
 
@@ -20,6 +20,8 @@ Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze u
 - Wiele kalendarzy (np. AGH, wspólny, ważne daty), ale **domyślny widok pokazuje wszystkie naraz**; w przyszłości filtry po kalendarzach. „Wspólny” jest nazwą jednego z kalendarzy, nie nazwą zbiorczego widoku.
 - Sidebar: wąski pasek ikon po lewej, rozwijany po najechaniu; ikony w osobnych kafelkach. Paleta: sidebar #8B50E6, kafelki #A977F2, aktywny #DEC4FF, tło #E9D5FF, karty #FFC4E4, tekst #3D185C, akcent różowy #FF4FA3 poza menu. Nie twórz dominującego białego interfejsu.
 - Aktualnie stos: Next.js (App Router), React, TypeScript, Tailwind CSS. PostgreSQL planowany na backend, ale schemat i mechanizm dostępu do danych nie są jeszcze zaimplementowane. Integracja Gmail i importer AGH są etapami późniejszymi.
+
+Wymagania szczegółowe dla menu, widoków kalendarza, hover i animowanych serc są w `docs/UI_UX.md`. Nie zastępuj ich własnymi domysłami i nie implementuj na raz całego zakresu.
 
 ## Najbliższe zadanie z Codexem: pierwszy interfejs
 
