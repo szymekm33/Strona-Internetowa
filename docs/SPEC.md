@@ -1,16 +1,22 @@
 # Specyfikacja funkcjonalna
 
-Stan na 2026-10-30. Dokument zbiera ustalenia produktu. Szczegóły techniczne i nierozstrzygnięte zachowania oznaczono osobno.
+Stan na 2026-10-31. Dokument zbiera ustalenia produktu. Szczegóły techniczne i nierozstrzygnięte zachowania oznaczono osobno.
 
 ## 1. Cel i dostęp
 
 Prywatna strona dla dwóch osób, z oddzielnymi kontami. Rejestracja nie jest otwarta. Dostęp do danych i zdjęć mają wyłącznie uprawnieni, zalogowani użytkownicy.
 
-Głównym urządzeniem jest komputer; interfejs ma być użyteczny także na telefonie. Styl: minimalistyczny, przyjazny, osobisty, z kolorem i dobrymi ustawieniami domyślnymi. Dokładny projekt graficzny pozostaje do ustalenia.
+Głównym urządzeniem jest komputer; interfejs ma być użyteczny także na telefonie. Styl: minimalistyczny, przyjazny, osobisty, z kolorem i dobrymi ustawieniami domyślnymi. Zatwierdzono paletę kolorów i model nawigacji (poniżej); szczegóły konkretnych ekranów pozostają do doprojektowania.
+
+### Wspólna przestrzeń i wygląd
+
+Dwa oddzielne logowania prowadzą do jednej wspólnej przestrzeni: obie osoby widzą wszystkie dane. „Osobiste” wydarzenie oznacza jednego uczestnika, a nie ukrycie wpisu przed drugą osobą.
+
+Kolory: sidebar `#8B50E6`, kafelki nawigacji `#A977F2`, aktywny kafelek `#DEC4FF`, tło `#E9D5FF`, karty `#FFC4E4`, tekst `#3D185C`, akcent różowy `#FF4FA3` poza menu. Sidebar stale widoczny jako wąski pasek z ikonami w osobnych kafelkach; rozszerzany po najechaniu. Unikamy dominującej bieli.
 
 ## 2. Pierwsza wersja lokalna — plan roboczy
 
-Pierwszy fragment obejmuje logowanie i kalendarz dnia:
+Pierwsze **funkcjonalne MVP** obejmuje logowanie i kalendarz dnia. Przed tym realizujemy krótkie ćwiczenia i prototyp interfejsu w React/Next.js, bez prawdziwych danych:
 
 1. Każda osoba loguje się na własne konto.
 2. Kalendarz pokazuje wspólną oś czasu i dwie kolumny osób.
@@ -26,6 +32,8 @@ Pierwszy fragment obejmuje logowanie i kalendarz dnia:
 Sposób tworzenia dwóch kont, logowanie, pola formularza, obsługa nakładania się wydarzeń oraz uprawnienia edycji i usuwania wymagają doprecyzowania przed odpowiednią implementacją.
 
 ## 3. Docelowy kalendarz
+
+Kalendarzy jest wiele (np. AGH, wspólny, ważne daty). Główny widok **domyślnie łączy wydarzenia ze wszystkich kalendarzy**, a w przyszłości pozwoli wybrać widoczne kalendarze. Sam kalendarz nazwany „wspólny” jest jednym z nich. Kolor kalendarza i oznaczenie autora są odrębnymi informacjami; szczegóły sposobu ich równoczesnego wyświetlania uzgodnimy w widokach.
 
 - Spotkania, randki, plany osobiste i wspólne.
 - Dwie kolumny osób w obrębie dnia, również w widoku tygodnia.
