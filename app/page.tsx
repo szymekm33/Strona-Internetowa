@@ -17,7 +17,7 @@ export default function Home() {
             Siema sprawdzam czy to wgl dziala
 
           </p>
-          <section className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+          <section className="bg-[#FFC4E4] rounded-2xl p-6 flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
             <h2>Plan Dnia</h2>
             <p>Na dziś nie macie jeszcze żadnych wydarzeń</p>
 

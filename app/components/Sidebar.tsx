@@ -23,41 +23,61 @@ export default function Sidebar() {
                     <span className="whitespace-nowrap">Start</span>
                 </button>
 
-                <button type="button" className=" w-[51px] flex items-center justify-center h-[51px] rounded-[15px] bg-[#A977F2] ">
-                    <svg
-                        viewBox="0 0 24 24"
-                        className="h-[26px] w-[26px]"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={1.85}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                    >
-                        <rect x="3" y="5" width="18" height="16" rx="2" />
-                        <path d="M7 3v4M17 3v4M3 10h18M8 14h3v3H8z" />
-                    </svg>
+                <button type="button" aria-label="Kalendarz" className="w-[228px] h-[51px] flex items-center gap-[14px]">
+
+                    <span className="w-[51px] h-[51px] shrink-0 flex items-center justify-center rounded-[15px] bg-[#A977F2]">
+                        <svg
+                            viewBox="0 0 24 24"
+                            className="h-[26px] w-[26px]"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={1.85}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                        >
+
+
+
+                            <rect x="3" y="5" width="18" height="16" rx="2" />
+                            <path d="M7 3v4M17 3v4M3 10h18M8 14h3v3H8z" />
+                        </svg>
+                    </span>
+
+                    <span className="whitespace-nowrap">Kalendarz</span>
+                </button>
+
+                <button type="button" aria-label="Wspomnienia" className=" w-[228px] h-[51px] flex items-center gap-[14px]">
+                    <span className="w-[51px] h-[51px] shrink-0 flex items-center justify-center rounded-[15px] bg-[#A977F2]">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            className="h-[26px] w-[26px]"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={1.85}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="3" />
+                            <circle cx="8" cy="8" r="1.5" />
+                            <path d="m21 15-5-5L5 21" />
+                        </svg>
+                    </span>
+                    <span className="whitespace-nowrap">Wspomnienia</span>
 
                 </button>
 
-                <button type="button" aria-label="Wspomnienia" className=" w-[51px] flex items-center justify-center h-[51px] rounded-[15px] bg-[#A977F2] ">
-                    <svg
-                        viewBox="0 0 24 24"
-                        className="h-[26px] w-[26px]"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={1.85}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                    >
-                        <rect x="3" y="3" width="18" height="18" rx="3" />
-                        <circle cx="8" cy="8" r="1.5" />
-                        <path d="m21 15-5-5L5 21" />
-                    </svg>
 
 
-                </button>
+
+
+
+
+
+
+
 
 
             </nav>
