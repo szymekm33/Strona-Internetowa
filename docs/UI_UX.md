@@ -36,12 +36,19 @@ Z dotychczasowych ustaleń wynika, że prototyp v2 demonstruje: sidebar z kafelk
 
 ## 2. Nawigacja i wspólny układ
 
-- Po lewej **zawsze widoczny wąski sidebar** z ikonami funkcji.
+- Na komputerze po lewej jest **zawsze widoczny wąski sidebar** z ikonami funkcji. Przy szerokości okna do 760 px włącznie zastępuje go menu wysuwane przyciskiem.
+- Aktualizacja ustaleń (2026-11-07): po próbie szerszego paska użytkownik zdecydował o zachowaniu wymiarów referencji — 76 px po zwinięciu, 252 px po rozwinięciu, z odsunięciem treści o 76 px. Serce w nagłówku pozostaje obrysowane, bez wypełnienia, zgodnie z osobnym ustaleniem użytkownika.
+- Sidebar, tło `#E9D5FF` i kolor tekstu `#3D185C` są wspólne dla stron przez `app/layout.tsx`. Starterowe przełączanie kolorów na czarne tło według motywu systemu zostało usunięte; docelowy przełącznik motywu pozostaje osobnym etapem.
+- Stopka zawiera dwa awatary i jeden własny podpis użytkownika; drugi wiersz podpisu z prototypu został pominięty na jego prośbę.
 - Każda ikona znajduje się w **osobnym kafelku**; nie używać zwykłej tekstowej listy.
 - Po najechaniu kursorem sidebar płynnie się rozszerza, pokazując nazwy; po opuszczeniu kursorem zwija się.
+- Sidebar na komputerze rozwija się także przy fokusie klawiatury; wtedy pokazuje nazwy zakładek, markę i podpis stopki. Tab bez modyfikatorów z pustego obszaru strony kieruje na pierwszy link na komputerze, a na przycisk otwierania na małym ekranie. Alt+M przenosi do menu poza polami edycji i w razie potrzeby otwiera panel mobilny. Na komputerze kolejność Tab/Shift+Tab pozostaje naturalna. Skróty działają, gdy zdarzenie otrzymuje strona; pasek adresu i inne elementy przeglądarki pozostają poza jej kontrolą.
+- Link wybrany klawiaturą ma obrys 3 px w kolorze `#FD75B9`. Obrys odsunięto do wewnątrz o 3 px, żeby przewijana lista nie przycinała jego boków; to celowe odstępstwo od zewnętrznego obrysu prototypu.
 - Aktywny kafelek wyróżnia się lawendą `#DEC4FF`. W menu unikać jaskraworóżowego wyróżnienia.
 - Główne obszary przewidziane w nawigacji: Start, Kalendarz, Wspomnienia, Cele i marzenia, Wyjazdy, Nasza poczta. Powiadomienia (dzwonek) i ustawienia również muszą mieć dostępne wejście; dokładne umiejscowienie do dopracowania.
-- Na urządzeniach dotykowych nie można polegać wyłącznie na hover; zaproponować odpowiednie otwieranie menu dotykiem przed wdrożeniem mobilnym.
+- Nawigacja Next.js: Start `/`, Kalendarz `/kalendarz`, Wspomnienia `/wspomnienia`, Cele i marzenia `/cele`, Wyjazdy `/wyjazdy`, Nasza poczta `/poczta`, Powiadomienia `/powiadomienia`, Ustawienia `/ustawienia`. Nazwy folderów tras są małymi literami. Bieżący adres wyznacza aktywny kafelek i `aria-current="page"`; zmiana zakładki zachowuje wspólny layout. Nagłówki nowych ekranów nie oznaczają wdrożenia ich funkcji.
+- Menu mobilne: przycisk 43×43 px w nagłówku wysokości 76 px, panel 252 px z prawymi rogami 23 px i zasłona `#29143e77` na warstwie 45 pod panelem (50), zgodnie z referencją. Nazwy zakładek, marka i podpis są od razu widoczne bez hover. Zamknięcie przez zasłonę, Escape lub nawigację; dodatkowy kafelek „Zamknij menu” zapewnia dostępne zamykanie wewnątrz panelu i jest celowym dodatkiem względem prototypu.
+- Otwarte menu mobilne zachowuje fokus wewnątrz panelu, blokuje przewijanie i wyłącza interakcję z treścią pod nim. Po zamknięciu przywraca przewijanie oraz fokus przycisku. Zamknięty panel jest poza kolejnością klawiatury i ukryty dla technologii wspomagających. Zmiana na układ komputerowy usuwa zasłonę i blokady; powrót do małego okna zaczyna od zamkniętego menu. Ograniczenie animacji obejmuje również przejście mobilne.
 
 ## 3. Kalendarz — wspólne zasady
 

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #E9D5FF;
+  --foreground: #3D185C;
 }
 
 @theme inline {
@@ -12,15 +12,69 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+.mobile-menu-header,
+.mobile-menu-backdrop,
+.mobile-menu-close {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-menu-header,
+  .mobile-menu-close {
+    display: flex;
+  }
+
+  .mobile-menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    background: #29143e77;
+    border: 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 252px;
+    transform: translateX(-110%);
+    border-radius: 0 23px 23px 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.25s, visibility 0s 0.25s;
+  }
+
+  .sidebar[data-open="true"] {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  .sidebar .brand-name,
+  .sidebar .nav-label,
+  .sidebar .side-signature {
+    opacity: 1;
+    translate: 0;
+    transition-delay: 0s;
+  }
+
+  .sidebar nav {
+    overscroll-behavior: contain;
+  }
+
+  .page-content {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar * {
+    transition: none !important;
+    animation: none !important;
+  }
 }

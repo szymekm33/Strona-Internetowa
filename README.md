@@ -4,7 +4,7 @@ Prywatna strona dla Szymka i jego dziewczyny: wspólny kalendarz, wspomnienia, c
 
 ## Stan projektu
 
-Szkielet aplikacji Next.js 16.4.3 (React, TypeScript, Tailwind CSS) działa lokalnie i jest zapisany w repozytorium. Uczymy się teraz tworzenia interfejsu: pierwsza strona, sidebar i prototyp kalendarza. Pełne funkcje, logowanie i baza danych nie są jeszcze gotowe.
+Szkielet aplikacji Next.js 16.4.3 (React, TypeScript, Tailwind CSS) działa lokalnie i jest zapisany w repozytorium. Sidebar prowadzi do ośmiu ekranów, zaznacza bieżącą zakładkę i obsługuje klawiaturę. Na wąskich ekranach otwiera się przyciskiem; zamyka przez tło, Escape, przycisk zamknięcia lub wybór zakładki. Poza stroną główną ekrany mają na razie proste nagłówki; pełne funkcje, kalendarz, logowanie i baza danych nie są jeszcze gotowe. Kontynuujemy budowanie interfejsu.
 
 Planujemy PostgreSQL, ale sposób uwierzytelniania, ORM i migracje wymagają decyzji. Hosting nie jest warunkiem rozpoczęcia prac. Nie utworzono płatnych usług ani wdrożenia internetowego.
 

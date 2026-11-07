@@ -1,6 +1,6 @@
 # Zadania i postępy
 
-Stan na 2026-10-31.
+Stan na 2026-11-07.
 
 Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej implementacji.
 
@@ -15,15 +15,15 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 - [ ] Doprecyzować minimalny model danych i formularz wydarzenia.
 - [ ] Uzgodnić pierwszy widok dnia.
 
-**Następne zadanie dla Codexa (etap nauki):** usunąć starterowe elementy Next.js, nadać stronie naszą paletę, zbudować prosty sidebar z kafelkami i miejscem na widok kalendarza. Robić to w małych iteracjach z samodzielnym pisaniem kodu przez użytkownika. Następnie wizualny prototyp kalendarza na danych przykładowych. Hosting pozostaje na później.
+**Następne zadanie dla Codexa:** wizualny prototyp kalendarza na danych przykładowych, po doprecyzowaniu pierwszego widoku dnia. Kontynuować małymi krokami i tłumaczyć kod; zakres samodzielnego pisania dopasowywać do bieżącej prośby użytkownika. Rzeczywisty telefon/Safari i pełny wygląd pozostałych ekranów nadal wymagają odbioru. Hosting pozostaje na później.
 
 ## Wzorzec interfejsu (prototyp v2)
 
 - [x] Użytkownik zaakceptował prototyp `razem-prototyp-v2.html` w czacie „Wygląd i obsługa” (2026-10-31).
-- [ ] **Przenieść oryginalny plik** do repozytorium jako `design/razem-prototyp-v2.html` (bez sekretów i prawdziwych danych).
+- [x] Oryginalny plik jest dostępny w repozytorium pod `design/reference/razem-prototyp-v2.html`; kontrakt wizualny znajduje się w `design/SPECYFIKACJA_UI_UX_V2.md`.
 - [ ] Porównać HTML/CSS/JS prototypu z `docs/UI_UX.md`; wdrażać stopniowo jego zachowanie w React.
 
-Dopóki HTML nie jest dostępny w repozytorium, opis UX to tylko tekstowy wzorzec i nie umożliwia wiernej rekonstrukcji wszystkich animacji.
+Referencja HTML jest dostępna. Menu porównano z jej parametrami i zrzutami; przenoszenie wyglądu pozostałych ekranów oraz ich animacji trwa.
 
 ## Etap nauki — interfejs bez bazy (przed pełnym MVP)
 
@@ -31,7 +31,14 @@ Wymagania wyglądu i interakcji opisano w [UI_UX.md](UI_UX.md).
 
 - [ ] Uporządkować `app/page.tsx`, zachowując napisane samodzielnie elementy; usunąć domyślne przyciski i zbędne treści Next.js.
 - [ ] Ustawić zatwierdzoną paletę i podstawową strukturę strony.
-- [ ] Zrobić komponent `Sidebar` z ikonami w kafelkach i rozwijaniem na hover.
+- [x] Zrobić komponent `Sidebar` z ikonami w kafelkach i rozwijaniem na hover.
+- [x] Uzupełnić osiem ikon SVG menu i nagłówek z sercem oraz nazwą „razem.”; zachować wymiary kafelków i odstępy nagłówka prototypu v2. Po próbie szerokości 84 px przywrócono referencyjne 76 px i poziomy padding 12 px; serce ma sam obrys zgodnie z ustaleniem użytkownika.
+- [x] Dodać rozjaśnienie nieaktywnych kafelków do `#BE96FF`, powiększenie do 105% i cień po najechaniu na ich przycisk, z przejściem 200 ms. Aktywny Start zachowuje lawendowe tło i własny cień. Przejścia kafelków respektują ograniczenie ruchu. Porównanie wizualne z prototypem pozostaje do wykonania.
+- [x] Ustawić osiem etykiet menu na 13 px i grubość 750; dodać pojawianie z przesunięcia −5 px przez 200 ms, z opóźnieniem 90 ms przy rozwijaniu. Przejścia etykiet respektują ograniczenie ruchu. Porównanie wizualne pozostaje do wykonania.
+- [x] Umieścić sidebar i wspólne kolory we wspólnym layoucie, odsunąć treść o 76 px i usunąć starterowe czarne tło dla ciemnego motywu systemu. Sprawdzono ESLint, odpowiedź HTTP 200 oraz lawendowe tło na zrzucie Chrome 1280×800 z wymuszonym ciemnym motywem. Pełne porównanie z prototypem pozostaje do wykonania.
+- [x] Podłączyć osiem pozycji menu przez `Link`, dodać brakujące ekrany z nagłówkami i oznaczać aktywny kafelek według `usePathname`. Poprawiono nazwę folderu `Kalendarz` na `kalendarz`, aby link nie zwracał 404. Sprawdzono TypeScript, ESLint, HTTP 200 ośmiu tras, przejścia bez przeładowania dokumentu, Wstecz, odświeżenie i aktywny kafelek w Chrome. Obejrzano zrzuty zwiniętego i rozwiniętego menu 1280×800. Strony pozostają szkieletem bez docelowych funkcji.
+- [x] Dodać rozwijanie całego menu klawiaturą, widoczny obrys wybranego linku, wejście Tabem z pustej strony i skrót Alt+M. W Chrome sprawdzono pierwszy Tab, kolejne pozycje, Shift+Tab, Enter, Alt+M, wyjście Tabem poza menu oraz brak przechwytywania klawiatury w polach formularza. TypeScript i ESLint przeszły; obejrzano zrzut menu otwartego klawiaturą.
+- [x] Dokończyć menu mobilne: przycisk otwierania, zasłona, zamknięcie przez tło/Escape/przycisk/link, widoczne podpisy, dostępny fokus i przywracanie przewijania. Sprawdzono Chrome z emulacją dotyku 390×844, niskie okno, granicę 760/761 px, zmianę rozmiaru, wszystkie osiem linków i bieżącą zakładkę, Ctrl+klik, historię, Tab/Shift+Tab/Alt+M oraz ograniczenie ruchu. Obejrzano zrzuty menu zamkniętego, otwartego i w niskim oknie; testy desktopowe również przeszły. Fizyczny telefon i Safari pozostają do sprawdzenia.
 - [ ] Dodać główny obszar „Plan dnia” z przykładowymi, wyraźnie testowymi wydarzeniami.
 - [ ] Przećwiczyć JSX, komponenty, propsy i klasy Tailwind; sprawdzić wygląd na laptopie i w węższym oknie.
 
