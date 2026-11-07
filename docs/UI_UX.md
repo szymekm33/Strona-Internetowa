@@ -8,17 +8,17 @@ W czacie projektowym „Wygląd i obsługa UI UX” powstały dwa lokalne protot
 - `razem-prototyp.html` — wersja v1.0;
 - **`razem-prototyp-v2.html` — wersja v2.0, zaakceptowana przez użytkownika 2026-10-31 jako aktualny wzorzec wyglądu.**
 
-**Stan pliku źródłowego:** oryginalny HTML v2 **nie jest jeszcze dodany do tego repozytorium**. Docelowa ścieżka po skopiowaniu: `design/razem-prototyp-v2.html`. Nie twierdź, że masz dostęp do oryginalnego kodu lub znasz dokładne wartości animacji, dopóki faktycznie nie znajdziesz tego pliku.
+**Stan pliku źródłowego:** oryginalny HTML v2 **jest już w repozytorium** pod `design/reference/razem-prototyp-v2.html`. Dokładny kontrakt wymiarów, kolorów i animacji znajduje się w `design/SPECYFIKACJA_UI_UX_V2.md`. Przed implementacją UI odczytaj oba pliki, zamiast zgadywać parametry.
 
 Z dotychczasowych ustaleń wynika, że prototyp v2 demonstruje: sidebar z kafelkami i rozwijaniem na hover, wyraźną paletę fioletowo-lawendowo-różową, animowane serca, widoki miesiąca/tygodnia/dnia, filtry kalendarzy, autorów wydarzeń, priorytety, oraz przełączanie jasnego/ciemnego motywu. Prototyp działał lokalnie jako interaktywny HTML z danymi testowymi, **bez backendu i trwałości danych**.
 
-**Po dodaniu pliku do repozytorium:**
+**Zasady korzystania z referencji:**
 1. Przeczytaj oryginalny HTML, CSS i JavaScript, uruchom go lokalnie i porównaj efekt wizualny ze specyfikacją.
 2. Traktuj go jako **główne źródło szczegółów wyglądu i animacji**, a ten dokument jako listę zatwierdzonych wymagań i ich kontekstu.
 3. Przenieś stopniowo wygląd i zachowania do komponentów React/Next.js, ucząc użytkownika i nie nadpisując jego pracy. Nie kopiuj całego monolitycznego HTML jako gotowej aplikacji produkcyjnej.
 4. Zachowaj oryginalny plik nienaruszony jako referencję. Jeśli między prototypem a późniejszą jawną decyzją użytkownika jest różnica, poproś o rozstrzygnięcie przed zmianą docelowego projektu.
 
-**Do czasu dodania pliku** można kontynuować tylko ćwiczenia podstaw JSX/Tailwind i ogólne elementy UI na podstawie zatwierdzonej palety. Nie deklaruj wiernego odtworzenia zatwierdzonego prototypu.
+**Od tej chwili** referencja jest dostępna; odwzorowując wygląd w Next.js porównuj układ z oryginałem przy identycznej rozdzielczości i powiększeniu, zachowując istniejącą pracę użytkownika. Nie przedstawiaj demonstracyjnych interakcji HTML jako gotowych funkcji backendu.
 
 ## 1. Kierunek wizualny
 
