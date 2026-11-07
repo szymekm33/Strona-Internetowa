@@ -2,7 +2,7 @@
 
 ## Kontekst
 
-Prywatna strona dla dwóch osób. Przed zmianami przeczytaj README.md, docs/SPEC.md, docs/DECISIONS.md, docs/TASKS.md oraz **docs/UI_UX.md** (źródło szczegółowych decyzji wizualnych).
+Prywatna strona dla dwóch osób. Przed zmianami przeczytaj README.md, docs/SPEC.md, docs/DECISIONS.md, docs/TASKS.md oraz **docs/UI_UX.md** (źródło decyzji wizualnych). Przy zmianach wyglądu obowiązkowo przeczytaj też `design/SPECYFIKACJA_UI_UX_V2.md` i źródłowy prototyp `design/reference/razem-prototyp-v2.html` — to referencja dokładnych parametrów.
 
 Rozmowy tematyczne służą ustaleniom; aktualne wymagania potrzebne do implementacji należy utrwalać w repozytorium.
 
@@ -25,13 +25,17 @@ Wymagania szczegółowe dla menu, widoków kalendarza, hover i animowanych serc 
 
 ## Referencja wizualna: zaakceptowany prototyp v2
 
-Użytkownik zaakceptował prototyp `razem-prototyp-v2.html` z czatu „Wygląd i obsługa” 2026-10-31. To nie jest tylko pomysł: istnieje interaktywny plik z działającymi animacjami. **Jego oryginalna zawartość nie została jeszcze dodana do repozytorium.**
+Użytkownik zatwierdził prototyp UI/UX v2 z czatu „Wygląd i obsługa”. **Oryginalne pliki referencyjne są już w repozytorium**:
 
-- Szczegóły i status: `docs/UI_UX.md`.
-- Gdy plik `design/razem-prototyp-v2.html` pojawi się lokalnie, **przeczytaj go i użyj jako wzorca** przed implementacją zaawansowanego wyglądu; nie twórz arbitralnie odmiennego projektu.
-- Dopóki pliku brakuje, nie twierdź, że znasz dokładnie oryginalne animacje i proporcje. Zaproponuj kontynuację małych ćwiczeń lub poproś użytkownika o przeniesienie oryginału do wskazanej ścieżki.
-- Sam HTML jest wyłącznie prototypem bez backendu. Docelowy kod ma być wdrażany stopniowo w React/Next.js i zachowywać tryb nauki, nie przez bezrefleksyjne przekopiowanie całości.
-- Uzgodniony w prototypie jest też przełącznik trybu jasnego/ciemnego; sposób jego implementacji w aplikacji dopracuj na podstawie oryginału.
+- `design/reference/razem-prototyp-v2.html` — źródłowy interaktywny HTML/CSS/JS; **źródło prawdy o geometrii i animacjach**.
+- `design/SPECYFIKACJA_UI_UX_V2.md` — dokładny kontrakt kolorów, wymiarów, odstępów, animacji, kryteriów odbioru.
+- `docs/UI_UX.md` — decyzje produktowe, kontekst oraz ograniczenia dotyczące funkcji.
+
+**Obowiązkowo przed zmianą wyglądu:** odczytaj specyfikację i odpowiedni fragment oryginalnego HTML/CSS. Nie dobieraj arbitralnie nowych wartości, jeśli istnieją w prototypie. Przykład sidebaru: `width:76px` zwinięty, `252px` rozwinięty, `border-radius:0 24px 24px 0`, `inset:0 auto 0 0` (bez marginesu od lewej krawędzi); osobne kafelki ikon `51×51px`, radius `15px`.
+
+Po implementacji porównaj wersję Next.js z prototypem przy tej samej rozdzielczości i powiększeniu — także dla menu rozwiniętego i na telefonie. Jeśli narzędzie do zrzutów ekranu jest niedostępne, powiedz o tym zamiast deklarować porównanie.
+
+Sam HTML jest **prototypem bez backendu**. Przenoś go stopniowo do komponentów React/Next.js, zachowując edukacyjny tryb pracy; nie wklejaj całego HTML jako aplikacji. Dane testowe i interakcje kalendarza w prototypie nie przesądzają o docelowym modelu bazy danych. Wzorzec zawiera również przełącznik jasnego/ciemnego motywu.
 
 ## Najbliższe zadanie z Codexem: pierwszy interfejs
 
