@@ -8,7 +8,7 @@ Rozmowy tematyczne służą ustaleniom; aktualne wymagania potrzebne do implemen
 
 ## Aktualny etap
 
-Szkielet aplikacji został uruchomiony lokalnie i dodany do repozytorium. Aktualnie projekt używa Next.js 16.4.3 (App Router), React, TypeScript i Tailwind CSS. Dalsze decyzje o PostgreSQL, warstwie dostępu do danych i logowaniu wymagają świadomego zaprojektowania oraz aktualizacji dokumentacji. Hosting nie jest wymagany do lokalnych prac.
+Szkielet aplikacji został uruchomiony lokalnie i dodany do repozytorium. Aktualnie projekt używa Next.js 16.4.3 (App Router), React, TypeScript i Tailwind CSS. Lokalny test statycznego eksportu przeszedł. Docelowy hosting obsługuje PHP i nie udostępnia konsoli. Buduj frontend lokalnie, a do katalogu strony wgrywaj zawartość `out`.
 
 Pierwsze funkcjonalne MVP obejmuje dwa loginy i widok dnia z trwałym zapisem. Sidebar i trasy już istnieją. Aktualny etap to wdrożenie kalendarza małymi krokami według [planu kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
@@ -19,7 +19,7 @@ Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze u
 - Jeden prywatny workspace dla **dwóch** użytkowników. Wszystkie dane są dla obu widoczne; osoba przypisana do wydarzenia to nie to samo co uprawnienia do jego odczytu.
 - „Wszystkie” łączy AGH, UR, UKEN, Plany ręczne i Ważne daty. „Razem” oznacza wydarzenie obojga.
 - Sidebar: wąski pasek ikon po lewej, rozwijany po najechaniu; ikony w osobnych kafelkach. Paleta: sidebar #8B50E6, kafelki #A977F2, aktywny #DEC4FF, tło #E9D5FF, karty #FFC4E4, tekst #3D185C, akcent różowy #FF4FA3 poza menu. Nie twórz dominującego białego interfejsu.
-- Aktualnie stos: Next.js (App Router), React, TypeScript, Tailwind CSS. PostgreSQL planowany na backend, ale schemat i mechanizm dostępu do danych nie są jeszcze zaimplementowane. Integracja Gmail i importer AGH są etapami późniejszymi.
+- Frontend: statyczny eksport Next.js, React, TypeScript i Tailwind CSS. Backend: PHP, sesje i MySQL lub MariaDB (silnik do potwierdzenia w phpMyAdmin). Import AGH i Gmail są etapami późniejszymi.
 
 Wymagania szczegółowe dla menu, widoków kalendarza, hover i animowanych serc są w `docs/UI_UX.md`. Nie zastępuj ich własnymi domysłami i nie implementuj na raz całego zakresu.
 
@@ -39,7 +39,7 @@ Sam HTML jest **prototypem bez backendu**. Przenoś go stopniowo do komponentów
 
 ## Najbliższe zadanie z Codexem: kalendarz
 
-Przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i otwórz `design/reference/razem-kalendarz-prototyp.html`. Dla kalendarza ta referencja określa aktualne interakcje, a ogólny prototyp v2 nadal opisuje wspólny wygląd strony. Zacznij od sprawdzenia trasy `/kalendarz` i zaplanowania z użytkownikiem pierwszego kroku widoku dnia oraz zapisu w PostgreSQL. Zachowaj edukacyjny tryb pracy.
+Przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i otwórz `design/reference/razem-kalendarz-prototyp.html`. Dla kalendarza ta referencja określa aktualne interakcje, a ogólny prototyp v2 nadal opisuje wspólny wygląd strony. Zacznij od sprawdzenia trasy `/kalendarz` i zaplanowania z użytkownikiem pierwszego kroku widoku dnia oraz zapisu przez PHP w MySQL lub MariaDB. Zachowaj edukacyjny tryb pracy.
 
 ## Wymagania do zachowania
 

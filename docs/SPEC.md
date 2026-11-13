@@ -101,7 +101,7 @@ Oznaczenie tematu, zakres uprawnień, synchronizacja i sposób wykrywania nowych
 
 ## 8. Uruchamianie i przechowywanie
 
-Najpierw wersja lokalna. Hosting kolegi jest możliwością do sprawdzenia; dostawca zastępczy i budżet pozostają otwarte.
+Docelowo hosting PHP kolegi z limitem 1 GB i bez konsoli. Frontend budujemy lokalnie jako eksport statyczny. PHP obsługuje sesje i dostęp do MySQL lub MariaDB. Test wdrożenia na hostingu pozostaje do wykonania.
 
 Docelowy model logiczny: przeglądarka komunikuje się z aplikacją, aplikacja obsługuje konta i dane w bazie oraz dostęp do zdjęć. Miejsce przechowywania zdjęć i kopii zapasowych wymaga decyzji technicznej.
 

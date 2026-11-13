@@ -12,8 +12,9 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 - [x] Utworzono prywatne repozytorium.
 - [x] Podzielono pracę na czaty tematyczne.
 - [x] Przygotowano dokumentację startową i kryteria pierwszej lokalnej wersji.
-- [x] Wybrać Next.js (React, TypeScript, Tailwind CSS) i uruchomić lokalnie; PostgreSQL zaplanowany, lecz konfiguracja bazy i migracji jeszcze otwarta.
+- [x] Wybrać Next.js (React, TypeScript, Tailwind CSS) i uruchomić lokalnie; lokalny test statycznego eksportu przeszedł.
 - [ ] Ustalić tworzenie dwóch kont oraz logowanie.
+- [ ] Zapisać sprawdzoną lokalnie konfigurację eksportu w repozytorium i sprawdzić `/kalendarz/` na hostingu.
 - [ ] Doprecyzować minimalny model danych i formularz wydarzenia.
 - [ ] Uzgodnić pierwszy widok dnia.
 

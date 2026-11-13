@@ -19,7 +19,7 @@ Stan na 2026-10-31. Odróżniamy ustalenia produktu od roboczej kolejności impl
 | D-009 | Plan i specyfikacje powstają w czatach tematycznych i dokumentacji repozytorium; implementacja z Codexem. |
 | D-010 | Dwa osobne konta, wszystkie dane wspólne i widoczne dla obu. Autor i uczestnicy wydarzenia są niezależnymi informacjami; brak prywatnych wpisów. |
 | D-011 | Wiele kalendarzy (m.in. AGH, wspólny, ważne daty), domyślnie połączony widok wszystkich i możliwość filtrowania. „Wspólny” to osobny kalendarz, a nie agregat. |
-| D-012 | Frontend i backend w jednym projekcie Next.js (App Router) + React + TypeScript + Tailwind CSS. Lokalny szkielet działa; PostgreSQL jest planowany na kolejny etap, wybór ORM i uwierzytelniania nadal otwarty. |
+| D-012 | Next.js, React, TypeScript i Tailwind CSS jako frontend eksportowany statycznie. Hosting kolegi obsługuje PHP bez konsoli. Backend w PHP, baza MySQL lub MariaDB dostępna przez phpMyAdmin. |
 | D-013 | Użytkownik uczy się programowania poprzez wspólne pisanie z Codexem. Najpierw małe kroki interfejsu, później prototyp kalendarza i po doprecyzowaniu modelu danych — trwały zapis i logowanie. |
 
 ## Plan roboczy
@@ -32,13 +32,13 @@ Szkielet Next.js działa lokalnie i został wypchnięty na GitHuba; nie oznacza 
 
 | ID | Do rozstrzygnięcia | Miejsce ustaleń |
 | --- | --- | --- |
-| O-002 | Potwierdzenie konfiguracji PostgreSQL, wybór ORM i sposób zarządzania migracjami | Architektura i baza danych |
+| O-002 | Potwierdzenie silnika i wersji bazy, wersji PHP oraz sposobu importu schematu SQL | Architektura i baza danych |
 | O-003 | Utworzenie dwóch kont, logowanie i sesje | Architektura i baza danych |
 | O-004 | Minimalny model użytkowników, wydarzeń i uczestników | Architektura i baza danych |
 | O-005 | Formularz wydarzenia, kolizje terminów i uprawnienia edycji | Kalendarz |
 | O-006 | Pierwszy wygląd dnia, nawigacja i oznaczenia autorów | Kalendarz oraz Wygląd i obsługa |
 
-Hosting, budżet, domena, przechowywanie zdjęć i strategia kopii zapasowych wymagają osobnych decyzji przed wdrożeniem odpowiednich funkcji. Nie blokują dokumentacji ani lokalnego prototypu.
+Dostęp do hostingu, domena, przechowywanie zdjęć i strategia kopii zapasowych wymagają osobnych decyzji przed wdrożeniem odpowiednich funkcji. Nie blokują dokumentacji ani lokalnego prototypu.
 
 Google Calendar nie został wybrany jako obowiązkowy element architektury.
 

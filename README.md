@@ -6,7 +6,7 @@ Prywatna strona dla Szymka i jego dziewczyny: wspólny kalendarz, wspomnienia, c
 
 Szkielet aplikacji Next.js 16.4.3 (React, TypeScript, Tailwind CSS) działa lokalnie i jest zapisany w repozytorium. Sidebar prowadzi do ośmiu ekranów, zaznacza bieżącą zakładkę i obsługuje klawiaturę. Na wąskich ekranach otwiera się przyciskiem; zamyka przez tło, Escape, przycisk zamknięcia lub wybór zakładki. Poza stroną główną ekrany mają na razie proste nagłówki; pełne funkcje, kalendarz, logowanie i baza danych nie są jeszcze gotowe. Kontynuujemy budowanie interfejsu.
 
-Planujemy PostgreSQL, ale sposób uwierzytelniania, ORM i migracje wymagają decyzji. Hosting nie jest warunkiem rozpoczęcia prac. Nie utworzono płatnych usług ani wdrożenia internetowego.
+Docelowo frontend eksportujemy statycznie z Next.js, a PHP obsłuży logowanie i zapis w MySQL lub MariaDB. Silnik bazy i działanie na hostingu kolegi pozostają do potwierdzenia. Szczegóły opisuje [plan kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
 ## Pierwszy działający fragment
 
