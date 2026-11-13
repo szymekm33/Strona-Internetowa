@@ -1,5 +1,7 @@
 # Zadania i postępy
 
+Aktualne wymagania i kolejność wdrożenia kalendarza opisuje [plan kalendarza](kalendarz/KALENDARZ_WDROZENIE.md). W zakresie kalendarza zastępuje wcześniejsze ustalenia w tym dokumencie.
+
 Stan na 2026-11-07.
 
 Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej implementacji.
@@ -15,7 +17,7 @@ Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej i
 - [ ] Doprecyzować minimalny model danych i formularz wydarzenia.
 - [ ] Uzgodnić pierwszy widok dnia.
 
-**Następne zadanie dla Codexa:** wizualny prototyp kalendarza na danych przykładowych, po doprecyzowaniu pierwszego widoku dnia. Kontynuować małymi krokami i tłumaczyć kod; zakres samodzielnego pisania dopasowywać do bieżącej prośby użytkownika. Rzeczywisty telefon/Safari i pełny wygląd pozostałych ekranów nadal wymagają odbioru. Hosting pozostaje na później.
+**Następne zadanie dla Codexa:** rozpocząć etap 1 według planu kalendarza. Prototyp HTML jest dostępny w `design/reference/razem-kalendarz-prototyp.html`.
 
 ## Wzorzec interfejsu (prototyp v2)
 

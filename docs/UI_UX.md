@@ -1,5 +1,7 @@
 # Wygląd i obsługa — zatwierdzone ustalenia UI/UX
 
+Aktualne wymagania i kolejność wdrożenia kalendarza opisuje [plan kalendarza](kalendarz/KALENDARZ_WDROZENIE.md). W zakresie kalendarza zastępuje wcześniejsze ustalenia w tym dokumencie.
+
 Stan: 2026-10-31. Źródło decyzji: czat projektowy „Wygląd i obsługa UI UX” oraz ustalenia dotyczące kalendarza. Dokument stanowi **specyfikację dla implementacji**, nie oznacza, że funkcje już działają.
 
 ## 0. Zaakceptowany prototyp referencyjny — ważne

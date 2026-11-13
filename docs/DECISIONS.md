@@ -1,5 +1,7 @@
 # Decyzje i kwestie otwarte
 
+Aktualne wymagania i kolejność wdrożenia kalendarza opisuje [plan kalendarza](kalendarz/KALENDARZ_WDROZENIE.md). W zakresie kalendarza zastępuje wcześniejsze ustalenia w tym dokumencie.
+
 Stan na 2026-10-31. Odróżniamy ustalenia produktu od roboczej kolejności implementacji.
 
 ## Ustalone kierunki produktu

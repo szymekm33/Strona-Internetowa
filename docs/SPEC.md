@@ -1,5 +1,7 @@
 # Specyfikacja funkcjonalna
 
+Aktualne wymagania i kolejność wdrożenia kalendarza opisuje [plan kalendarza](kalendarz/KALENDARZ_WDROZENIE.md). W zakresie kalendarza zastępuje wcześniejsze ustalenia w tym dokumencie.
+
 Stan na 2026-10-31. Dokument zbiera ustalenia produktu. Szczegóły techniczne i nierozstrzygnięte zachowania oznaczono osobno.
 
 ## 1. Cel i dostęp

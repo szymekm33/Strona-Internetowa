@@ -10,14 +10,14 @@ Rozmowy tematyczne służą ustaleniom; aktualne wymagania potrzebne do implemen
 
 Szkielet aplikacji został uruchomiony lokalnie i dodany do repozytorium. Aktualnie projekt używa Next.js 16.4.3 (App Router), React, TypeScript i Tailwind CSS. Dalsze decyzje o PostgreSQL, warstwie dostępu do danych i logowaniu wymagają świadomego zaprojektowania oraz aktualizacji dokumentacji. Hosting nie jest wymagany do lokalnych prac.
 
-Pierwszym **pełnym funkcjonalnym MVP** pozostaje logowanie dwóch kont i kalendarz dnia z trwałym zapisem. **Najbliższy etap nauki i implementacji** jest mniejszy: zbudowanie wyglądu głównej strony i nawigacji bez bazy i logowania, następnie wizualny prototyp kalendarza na syntetycznych danych. W dalszej kolejności zaprojektujemy model danych, logowanie i PostgreSQL. Nie prezentuj prototypu jako gotowego kalendarza ani makiety jako zabezpieczonej aplikacji.
+Pierwsze funkcjonalne MVP obejmuje dwa loginy i widok dnia z trwałym zapisem. Sidebar i trasy już istnieją. Aktualny etap to wdrożenie kalendarza małymi krokami według [planu kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
 Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze użytkownika. Przed propozycją zmian sprawdź aktualny lokalny plik, zachowaj jego samodzielnie napisane fragmenty i nie nadpisuj ich bez uzgodnienia.
 
 ## Zatwierdzony zakres i decyzje na dziś (2026-10-31)
 
 - Jeden prywatny workspace dla **dwóch** użytkowników. Wszystkie dane są dla obu widoczne; osoba przypisana do wydarzenia to nie to samo co uprawnienia do jego odczytu.
-- Wiele kalendarzy (np. AGH, wspólny, ważne daty), ale **domyślny widok pokazuje wszystkie naraz**; w przyszłości filtry po kalendarzach. „Wspólny” jest nazwą jednego z kalendarzy, nie nazwą zbiorczego widoku.
+- „Wszystkie” łączy AGH, UR, UKEN, Plany ręczne i Ważne daty. „Razem” oznacza wydarzenie obojga.
 - Sidebar: wąski pasek ikon po lewej, rozwijany po najechaniu; ikony w osobnych kafelkach. Paleta: sidebar #8B50E6, kafelki #A977F2, aktywny #DEC4FF, tło #E9D5FF, karty #FFC4E4, tekst #3D185C, akcent różowy #FF4FA3 poza menu. Nie twórz dominującego białego interfejsu.
 - Aktualnie stos: Next.js (App Router), React, TypeScript, Tailwind CSS. PostgreSQL planowany na backend, ale schemat i mechanizm dostępu do danych nie są jeszcze zaimplementowane. Integracja Gmail i importer AGH są etapami późniejszymi.
 
@@ -37,13 +37,9 @@ Po implementacji porównaj wersję Next.js z prototypem przy tej samej rozdzielc
 
 Sam HTML jest **prototypem bez backendu**. Przenoś go stopniowo do komponentów React/Next.js, zachowując edukacyjny tryb pracy; nie wklejaj całego HTML jako aplikacji. Dane testowe i interakcje kalendarza w prototypie nie przesądzają o docelowym modelu bazy danych. Wzorzec zawiera również przełącznik jasnego/ciemnego motywu.
 
-## Najbliższe zadanie z Codexem: pierwszy interfejs
+## Najbliższe zadanie z Codexem: kalendarz
 
-1. Najpierw pokaż użytkownikowi, które elementy dotychczasowej strony są jedynie starterem Next.js; nie usuwaj świadomie dodanych przez niego treści bez uzgodnienia.
-2. Pracuj w małych iteracjach: (a) usunięcie niepotrzebnych przycisków startera i zmiana tytułu strony, (b) tło i kolory, (c) prosty komponent `Sidebar`, (d) kafelki nawigacji i rozwijanie na hover, (e) główny obszar „Plan dnia” z danymi przykładowymi.
-3. Przy każdej iteracji wyznacz niewielki fragment kodu do samodzielnego napisania (komponent, props, JSX lub klasy Tailwind); wskazówki przed gotowcem. Omawiaj różnicę między statycznym widokiem a faktycznie działającymi funkcjami.
-4. Unikaj przedwczesnego generowania logowania, bazy czy pełnego kalendarza. Dalszy etap wymaga uzgodnienia modelu danych i sposobu autoryzacji.
-5. Zmiany zapisuj i sprawdzaj lokalnie; proponuj commit dopiero po weryfikacji i poinformowaniu użytkownika, co zostało zmienione.
+Przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i otwórz `design/reference/razem-kalendarz-prototyp.html`. Dla kalendarza ta referencja określa aktualne interakcje, a ogólny prototyp v2 nadal opisuje wspólny wygląd strony. Zacznij od sprawdzenia trasy `/kalendarz` i zaplanowania z użytkownikiem pierwszego kroku widoku dnia oraz zapisu w PostgreSQL. Zachowaj edukacyjny tryb pracy.
 
 ## Wymagania do zachowania
 
