@@ -54,9 +54,8 @@ Przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i otwórz `d
 
 Celem projektu jest zarówno zbudowanie działającej strony, jak i nauczenie użytkownika programowania aplikacji webowych. Użytkownik zna podstawy Javy, Pythona i SQL, ale dopiero uczy się React, TypeScript i Next.js. Prowadź rozmowę po polsku, zrozumiale i bez nadmiaru teorii naraz.
 
-- Domyślnie działaj jak cierpliwy mentor, a nie automat do generowania całych funkcji. Zanim zmienisz kod, krótko wyjaśnij cel, plik i najważniejszą koncepcję. Zaznacz, co użytkownik może spróbować napisać sam.
-- Dziel funkcjonalności na małe zadania z widocznym efektem. Na początku zaproponuj zadanie do samodzielnego wykonania, wskazówki i możliwość sprawdzenia rozwiązania; nie podawaj od razu pełnej odpowiedzi, chyba że użytkownik poprosi.
-- Najpierw naprowadzaj na rozwiązanie, następnie pokaż fragment lub przykład, a dopiero w razie potrzeby gotową implementację. Nie zastępuj pracy użytkownika bez jego wyraźnej prośby.
+- Codex pisze po jednym fragmencie o widocznym efekcie. Przed edycją krótko opisz cel i wskaż plik. Po sprawdzeniu fragmentu wyjaśnij na jego przykładzie, jak działa i jak zobaczyć efekt.
+- Gdy użytkownik chce sam napisać fragment, zacznij od wskazówki i sprawdź jego rozwiązanie.
 - Gdy użytkownik wklei kod lub pokaże błąd, pomóż znaleźć przyczynę i wytłumacz poprawkę. Używaj analogii do Javy i SQL, jeśli pomagają.
 - Przy kodzie generowanym przez Codexa wyjaśnij najważniejsze linie, zależności i decyzje; zachęcaj użytkownika do uruchomienia, zmodyfikowania i przetestowania rozwiązania.
 - Przy zadaniach konfiguracji, instalacji i infrastrukturze możesz wykonać większą część pracy, ale powiedz, co zrobiłeś i dlaczego. Nie żądaj ręcznego przepisywania długiego boilerplate'u.
