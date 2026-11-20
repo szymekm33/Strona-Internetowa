@@ -1,0 +1,86 @@
+.calendar-day {
+    --axis-width: 61px;
+    display: grid;
+    grid-template-columns: var(--axis-width) repeat(2, minmax(0, 1fr));
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid #dfc8ef;
+    border-radius: 17px;
+    background: #faf0ff;
+    font: 15px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+}
+
+.calendar-day .hours {
+    display: grid;
+    place-items: center;
+    background: #f4e2fe;
+    border-bottom: 1px solid #dcc4f0;
+    color: #754c92;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.calendar-day .person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 5px;
+    border-bottom: 1px solid #d8baed;
+    font-weight: 850;
+}
+
+.calendar-day .szymek { background: #dcc0fc; }
+.calendar-day .oliwusia { background: #ffd6e9; }
+
+.calendar-day .avatar {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #dcc4ff;
+    color: #6834ac;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.calendar-day .oliwusia .avatar {
+    background: #ffc1e2;
+    color: #8e2c64;
+}
+
+.calendar-day .hour-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    height: 46px;
+}
+
+.calendar-day .hour-label {
+    padding: 3px 10px 0 0;
+    border-right: 1px solid #ddc3ee;
+    background: #f4e2fe;
+    color: #795195;
+    font-size: 10px;
+    text-align: right;
+}
+
+.calendar-day .hour-slot {
+    border-bottom: 1px solid #e9d7f3;
+}
+
+.calendar-day .hour-slot + .hour-slot {
+    border-left: 1px solid #e5d0f3;
+}
+
+@media (max-width: 760px) {
+    .calendar-day { --axis-width: 43px; }
+    .calendar-day .hour-label { padding-right: 5px; }
+    .calendar-day .person {
+        gap: 3px;
+        padding: 8px 3px;
+        font-size: 13px;
+    }
+    .calendar-day .avatar { width: 23px; height: 23px; }
+}

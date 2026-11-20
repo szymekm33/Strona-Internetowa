@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="520" viewBox="0 0 1240 520" role="img" aria-labelledby="title desc">
+  <title id="title">Kalendarz dla dwojga — model bazy danych</title>
+  <desc id="desc">Cztery tabele. Każde wydarzenie ma jednego autora w users i należy do jednego kalendarza w calendars. Tabela event_participants łączy wydarzenie z jednym lub dwoma użytkownikami. Jej klucz główny składa się z event_id i user_id.</desc>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #3d185c; }
+    .table { fill: #fffaff; stroke: #a881c4; stroke-width: 1.5; }
+    .table-name { font-size: 22px; font-weight: 700; }
+    .field { font-family: Consolas, monospace; font-size: 17px; }
+    .key, .count { font-size: 15px; font-weight: 700; }
+    .key { text-anchor: end; fill: #69399b; }
+    .label { font-size: 15px; text-anchor: middle; }
+    .line { fill: none; stroke: #76499a; stroke-width: 2; }
+    .separator { stroke: #dcc6eb; }
+  </style>
+  <rect width="1240" height="520" fill="#f8efff"/>
+  <text x="32" y="42" font-size="27" font-weight="700">Kalendarz dla dwojga · struktura bazy</text>
+
+  <!-- Każda linia odpowiada jednemu planowanemu kluczowi obcemu. -->
+  <g class="line">
+    <path d="M 165 133 V 86 H 1077 V 156"/>
+    <path d="M 297 201 H 476"/>
+    <path d="M 297 383 H 476"/>
+    <path d="M 756 224 H 929"/>
+  </g>
+  <g class="label">
+    <text x="621" y="78">użytkownik jako uczestnik · event_participants.user_id</text>
+    <text x="386" y="190">autor wpisu</text>
+    <text x="386" y="372">kalendarz wpisu</text>
+    <text x="842" y="213">udział w wydarzeniu</text>
+  </g>
+  <g class="count">
+    <text x="175" y="125">1</text><text x="1087" y="148">0..*</text>
+    <text x="305" y="221">1</text><text x="468" y="221" text-anchor="end">0..*</text>
+    <text x="305" y="403">1</text><text x="468" y="403" text-anchor="end">0..*</text>
+    <text x="764" y="244">1</text><text x="921" y="244" text-anchor="end">1..2</text>
+  </g>
+
+  <g transform="translate(32 133)">
+    <rect class="table" width="265" height="148" rx="12"/>
+    <text class="table-name" x="17" y="32">users</text>
+    <path class="separator" d="M 0 45 H 265"/>
+    <g class="field">
+      <text x="17" y="71">user_id</text><text x="17" y="100">login</text><text x="17" y="129">password_hash</text>
+    </g>
+    <g class="key"><text x="248" y="71">PK</text><text x="248" y="100">UNIQUE</text></g>
+  </g>
+  <g transform="translate(32 312)">
+    <rect class="table" width="265" height="119" rx="12"/>
+    <text class="table-name" x="17" y="32">calendars</text>
+    <path class="separator" d="M 0 45 H 265"/>
+    <g class="field"><text x="17" y="71">calendar_id</text><text x="17" y="100">name</text></g>
+    <text class="key" x="248" y="71">PK</text>
+  </g>
+  <g transform="translate(476 136)">
+    <rect class="table" width="280" height="295" rx="12"/>
+    <text class="table-name" x="17" y="32">events</text>
+    <path class="separator" d="M 0 45 H 280"/>
+    <g class="field">
+      <text x="17" y="71">event_id</text><text x="17" y="100">title</text>
+      <text x="17" y="129">starts_at</text><text x="17" y="158">ends_at</text>
+      <text x="17" y="187">all_day</text><text x="17" y="216">author_id</text>
+      <text x="17" y="245">calendar_id</text><text x="17" y="274">zajmuje_czas</text>
+    </g>
+    <g class="key"><text x="263" y="71">PK</text><text x="263" y="216">FK</text><text x="263" y="245">FK</text></g>
+  </g>
+  <g transform="translate(929 156)">
+    <rect class="table" width="279" height="150" rx="12"/>
+    <text class="table-name" x="17" y="32">event_participants</text>
+    <path class="separator" d="M 0 45 H 279"/>
+    <g class="field"><text x="17" y="71">event_id</text><text x="17" y="100">user_id</text></g>
+    <g class="key"><text x="262" y="71">PK, FK</text><text x="262" y="100">PK, FK</text></g>
+    <text x="17" y="133" font-size="15">Obie kolumny tworzą jeden klucz.</text>
+  </g>
+
+  <path class="separator" d="M 32 452 H 1208"/>
+  <text x="32" y="477" font-size="15">PK = klucz główny · FK = klucz obcy · UNIQUE = wartość unikalna</text>
+  <text x="32" y="500" font-size="15">1 = jeden · 0..* = zero lub więcej · 1..2 = jeden lub dwóch uczestników wydarzenia</text>
+</svg>
