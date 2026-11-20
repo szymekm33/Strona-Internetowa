@@ -4,7 +4,9 @@ Prywatna strona dla Szymka i jego dziewczyny: wspólny kalendarz, wspomnienia, c
 
 ## Stan projektu
 
-Szkielet aplikacji Next.js 16.4.3 (React, TypeScript, Tailwind CSS) działa lokalnie i jest zapisany w repozytorium. Sidebar prowadzi do ośmiu ekranów, zaznacza bieżącą zakładkę i obsługuje klawiaturę. Na wąskich ekranach otwiera się przyciskiem; zamyka przez tło, Escape, przycisk zamknięcia lub wybór zakładki. Poza stroną główną ekrany mają na razie proste nagłówki; pełne funkcje, kalendarz, logowanie i baza danych nie są jeszcze gotowe. Kontynuujemy budowanie interfejsu.
+**Kalendarz ma działającą wersję lokalną z dwoma kontami, PHP i MariaDB.** Po uruchomieniu Docker Desktop wykonaj `npm run calendar:local`. Adres, dostęp do lokalnych kont oraz sposób wdrożenia na hosting opisuje [uruchomienie kalendarza](docs/kalendarz/URUCHOMIENIE.md).
+
+Frontend działa w Next.js 16.4.6, React, TypeScript i Tailwind CSS. Sidebar prowadzi do ośmiu ekranów i obsługuje klawiaturę oraz telefon. Kalendarz obejmuje dzień, tydzień i miesiąc, wspólny zapis wydarzeń, wolne terminy oraz plany uczelni. Pozostałe zakładki są na etapie szkieletu.
 
 Docelowo frontend eksportujemy statycznie z Next.js, a PHP obsłuży logowanie i zapis w MySQL lub MariaDB. Silnik bazy i działanie na hostingu kolegi pozostają do potwierdzenia. Szczegóły opisuje [plan kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 

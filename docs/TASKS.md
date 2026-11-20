@@ -2,7 +2,7 @@
 
 Aktualne wymagania i kolejność wdrożenia kalendarza opisuje [plan kalendarza](kalendarz/KALENDARZ_WDROZENIE.md). W zakresie kalendarza zastępuje wcześniejsze ustalenia w tym dokumencie.
 
-Stan na 2026-11-07.
+Stan lokalnego kalendarza na 2026-11-20. [Uruchomienie i wdrożenie](kalendarz/URUCHOMIENIE.md)
 
 Legenda: [x] wykonane, [ ] do wykonania. Samo opisanie funkcji nie oznacza jej implementacji.
 
@@ -45,20 +45,22 @@ Wymagania wyglądu i interakcji opisano w [UI_UX.md](UI_UX.md).
 - [ ] Dodać główny obszar „Plan dnia” z przykładowymi, wyraźnie testowymi wydarzeniami.
 - [ ] Przećwiczyć JSX, komponenty, propsy i klasy Tailwind; sprawdzić wygląd na laptopie i w węższym oknie.
 
-To jest prototyp UI, **nie** działająca autoryzacja, baza danych ani gotowy kalendarz.
+Powyższe ćwiczenia opisują wcześniejszy etap pracy nad interfejsem.
 
 ## Etap 1 — pierwsza działająca wersja lokalna
 
 - [x] Utworzyć i lokalnie uruchomić projekt Next.js; wysłać szkielet na GitHuba.
-- [ ] Dodać lokalną bazę oraz sposób tworzenia i aktualizowania jej struktury.
-- [ ] Przygotować dwa konta i logowanie, bez publicznej rejestracji.
-- [ ] Ograniczyć odczyt i zapis danych do zalogowanych, uprawnionych kont.
-- [ ] Dodać model wydarzenia z autorem, terminem i uczestnikami.
-- [ ] Zaimplementować kalendarz dnia ze wspólną osią czasu i dwiema kolumnami.
-- [ ] Dodać wydarzenie jednej osoby albo wspólne.
-- [ ] Zapewnić trwały zapis i ponowne odczytanie danych.
-- [ ] Dodać instrukcję lokalnej instalacji i uruchomienia.
-- [ ] Przeprowadzić odbiór poniższych scenariuszy.
+- [x] Uruchomić lokalną MariaDB i przygotować schemat SQL.
+- [x] Przygotować dwa konta i logowanie, bez publicznej rejestracji.
+- [x] Ograniczyć odczyt i zapis danych do zalogowanych, uprawnionych kont.
+- [x] Dodać model wydarzenia z autorem, terminem i uczestnikami.
+- [x] Zaimplementować kalendarz dnia ze wspólną osią czasu i dwiema kolumnami.
+- [x] Dodać wydarzenie jednej osoby albo wspólne.
+- [x] Zapewnić trwały zapis i ponowne odczytanie danych.
+- [x] Dodać instrukcję lokalnej instalacji i uruchomienia.
+- [x] Sprawdzić scenariusze lokalnie na syntetycznych wpisach.
+- [x] Dodać widoki tygodnia i miesiąca, filtry, wyszukiwanie wolnego, serie UR/UKEN i import AGH. Import testowano na plikach iCalendar.
+- [ ] Sprawdzić prywatną subskrypcję AGH i wdrożenie HTTPS na hostingu docelowym.
 
 ### Kryteria odbioru etapu 1
 

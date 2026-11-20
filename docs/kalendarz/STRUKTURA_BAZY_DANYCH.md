@@ -1,5 +1,7 @@
 # Struktura bazy danych — robocze ustalenia
 
+Wdrożoną wersję określa [schemat SQL](../../backend/schema.sql). Poniżej zachowano pierwotny model i diagram z nauki SQL. W implementacji doszły ustawienia kalendarza, wybory importu AGH i kolumny dla serii. Baza przechowuje czas w UTC, a PHP przelicza go na Europe/Warsaw. [Uruchomienie i działanie](URUCHOMIENIE.md)
+
 Stan na 2026-11-20. Zapis dotychczasowej rozmowy i ćwiczeń z SQL.
 To projekt struktury, nie gotowy skrypt tworzący bazę ani wykonana migracja.
 Wymagania i kolejność implementacji opisuje [plan kalendarza](KALENDARZ_WDROZENIE.md).

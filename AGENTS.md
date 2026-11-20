@@ -8,9 +8,9 @@ Rozmowy tematyczne służą ustaleniom; aktualne wymagania potrzebne do implemen
 
 ## Aktualny etap
 
-Szkielet aplikacji został uruchomiony lokalnie i dodany do repozytorium. Aktualnie projekt używa Next.js 16.4.3 (App Router), React, TypeScript i Tailwind CSS. Lokalny test statycznego eksportu przeszedł. Docelowy hosting obsługuje PHP i nie udostępnia konsoli. Buduj frontend lokalnie, a do katalogu strony wgrywaj zawartość `out`.
+Projekt używa Next.js 16.4.6 (App Router), React, TypeScript i Tailwind CSS. Kalendarz działa lokalnie z PHP i MariaDB. Frontend eksportujemy do `out`, a prywatną część PHP umieszczamy obok katalogu publicznego zgodnie z [instrukcją kalendarza](docs/kalendarz/URUCHOMIENIE.md).
 
-Pierwsze funkcjonalne MVP obejmuje dwa loginy i widok dnia z trwałym zapisem. Sidebar i trasy już istnieją. Aktualny etap to wdrożenie kalendarza małymi krokami według [planu kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
+Lokalny kalendarz obejmuje dwa loginy, trzy widoki, trwały zapis, wolne terminy i plany uczelni. Wdrożenie na rzeczywisty hosting i sprawdzenie prywatnej subskrypcji AGH wymagają konfiguracji właściciela. Wymagania znajdują się w [planie kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
 Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze użytkownika. Przed propozycją zmian sprawdź aktualny lokalny plik, zachowaj jego samodzielnie napisane fragmenty i nie nadpisuj ich bez uzgodnienia.
 
@@ -39,7 +39,7 @@ Sam HTML jest **prototypem bez backendu**. Przenoś go stopniowo do komponentów
 
 ## Najbliższe zadanie z Codexem: kalendarz
 
-Przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i otwórz `design/reference/razem-kalendarz-prototyp.html`. Dla kalendarza ta referencja określa aktualne interakcje, a ogólny prototyp v2 nadal opisuje wspólny wygląd strony. Zacznij od sprawdzenia trasy `/kalendarz` i zaplanowania z użytkownikiem pierwszego kroku widoku dnia oraz zapisu przez PHP w MySQL lub MariaDB. Zachowaj edukacyjny tryb pracy.
+Przy dalszych zmianach przeczytaj [plan wdrożenia](docs/kalendarz/KALENDARZ_WDROZENIE.md) i [instrukcję uruchomienia](docs/kalendarz/URUCHOMIENIE.md). Referencja `design/reference/razem-kalendarz-prototyp.html` określa interakcje, a ogólny prototyp v2 opisuje wspólny wygląd strony. Użytkownik poprosił o samodzielne dokończenie kalendarza i wyjaśnienie całości po implementacji.
 
 ## Wymagania do zachowania
 

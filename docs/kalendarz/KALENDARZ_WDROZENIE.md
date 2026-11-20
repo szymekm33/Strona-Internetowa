@@ -1,5 +1,7 @@
 # Wdrożenie kalendarza Razem
 
+Lokalny frontend i API PHP z MariaDB są zaimplementowane. Aktualny sposób uruchomienia oraz rozmieszczenie plików na hostingu opisuje [instrukcja kalendarza](URUCHOMIENIE.md). Poniżej zachowano uzgodnioną kolejność i kryteria prac.
+
 ## Wzorzec i reguły
 
 Otwórz lokalnie [prototyp HTML](../../design/reference/razem-kalendarz-prototyp.html). Startuje bez wydarzeń i zajęć. Ręcznie dodane wpisy zapisuje tylko w przeglądarce. W aplikacji dane i ustawienia uczelni zapisuj w MySQL lub MariaDB przez PHP, sprawdzając sesję przy każdym odczycie i zapisie.

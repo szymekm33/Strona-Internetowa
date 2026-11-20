@@ -1,0 +1,255 @@
+.calendar-app {
+    width: 100%;
+    min-width: 0;
+    max-width: calc(1390px + 2 * clamp(20px, 4vw, 66px));
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 66px) 70px;
+    font:
+        15px/1.55 "Segoe UI Variable",
+        "Segoe UI",
+        system-ui,
+        sans-serif;
+    color: #3d185c;
+}
+.calendar-account {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #795197;
+    font-size: 13px;
+    font-weight: 650;
+}
+.calendar-app > .headline {
+    margin-top: 32px;
+}
+.calendar-app button {
+    cursor: pointer;
+}
+.calendar-app button:disabled {
+    cursor: default;
+}
+.calendar-app :focus-visible {
+    outline: 3px solid #fd75b9;
+    outline-offset: 2px;
+}
+.calendar-app .calendar-day {
+    margin-top: 0;
+}
+.day-body,
+.all-day-row {
+    grid-column: 1 / -1;
+}
+.day-body {
+    position: relative;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.day-overlay {
+    position: absolute;
+    inset: 0 0 0 var(--axis-width);
+    pointer-events: none;
+}
+.calendar-app .day-event,
+.calendar-app .week-timed {
+    position: absolute;
+    pointer-events: auto;
+    min-height: 0;
+    overflow: hidden;
+}
+.calendar-app .day-event {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+.calendar-app .day-overlay .free-band {
+    position: absolute;
+    inset-inline: 0;
+    pointer-events: none;
+}
+.calendar-app .hour-slot .icon,
+.week-slots .icon {
+    opacity: 0;
+    color: #7e49a9;
+}
+.calendar-app .hour-slot:is(:hover, :focus-visible):enabled .icon,
+.week-slots button:is(:hover, :focus-visible):enabled .icon {
+    opacity: 1;
+}
+.calendar-app .all-day-row {
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+}
+.all-day-row small {
+    padding: 4px;
+    text-align: center;
+    font-size: 10px;
+}
+.all-day-entries {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 4px;
+}
+.all-day-entries.shared {
+    grid-column: 2 / 4;
+}
+.calendar-app .timed-week {
+    --week-hour: 64px;
+}
+.week-slots {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 64px;
+}
+.week-slots button {
+    display: grid;
+    place-items: center;
+}
+.week-slots button:is(:hover, :focus-visible):enabled {
+    background: #f0ddff9c;
+}
+.calendar-app .week-day {
+    min-width: 0;
+}
+.calendar-app .week-all-day {
+    min-height: 43px;
+}
+.calendar-app .week-hours {
+    min-height: 0;
+}
+.calendar-app .month-grid {
+    min-width: 0;
+}
+.calendar-app .month-mini {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.calendar-app .month-cell-head {
+    display: flex;
+    justify-content: space-between;
+}
+.calendar-app .event-dialog footer {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.calendar-app .event-dialog .primary {
+    color: #531038;
+    background: #ff8ac2;
+}
+.calendar-app .event-dialog .danger {
+    margin-right: auto;
+    color: #9d295e;
+}
+.calendar-app .check-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.calendar-app .check-options label,
+.calendar-app .option-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.calendar-app input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #8750de;
+}
+.calendar-app .event-dialog textarea {
+    min-width: 0;
+    min-height: 64px;
+    padding: 8px 12px;
+    border: 1px solid #d9bceb;
+    border-radius: 11px;
+    background: #fff9ff;
+    font-size: 15px;
+    font-weight: 400;
+}
+.calendar-app .event-dialog input[type="radio"] {
+    height: 100%;
+}
+.calendar-app .event-dialog label.color-swatch {
+    display: grid;
+    margin: 0;
+}
+.calendar-app .event-author,
+.calendar-app .plan-banner {
+    color: #71488c;
+    margin: 12px 0;
+}
+.calendar-app [role="alert"] {
+    color: #922657;
+    font-weight: 650;
+    margin: 10px 0;
+}
+.calendar-app details {
+    padding: 8px;
+    border-bottom: 1px solid #d9bceb;
+}
+.calendar-app summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+.calendar-login {
+    max-width: 390px;
+    background: #f8eafe;
+    border: 1px solid #d3b4eb;
+    border-radius: 24px;
+    padding: 24px;
+    margin: 18px 0;
+    display: grid;
+    gap: 14px;
+}
+.calendar-login h2 {
+    font-size: 22px;
+    font-weight: 750;
+}
+.calendar-login label {
+    display: grid;
+    gap: 6px;
+    color: #69398b;
+    font-weight: 750;
+}
+.calendar-login input {
+    height: 44px;
+    border: 1px solid #d9bceb;
+    background: #fff9ff;
+    border-radius: 11px;
+    padding: 0 12px;
+}
+@media (max-width: 760px) {
+    .calendar-app {
+        padding: 0 14px 42px;
+    }
+    .calendar-account {
+        position: relative;
+        height: 76px;
+        margin-top: -76px;
+        margin-left: 55px;
+    }
+    .calendar-app .month-grid,
+    .calendar-app .month-weekdays {
+        min-width: 0;
+    }
+    .calendar-app .calendar-surface {
+        min-width: 0;
+    }
+}
+@media (max-width: 450px) {
+    .calendar-account .crumb {
+        display: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .calendar-app *,
+    .calendar-app *::before {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}

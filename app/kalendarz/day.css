@@ -67,8 +67,27 @@
 }
 
 .calendar-day .hour-slot {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
     border-bottom: 1px solid #e9d7f3;
 }
+
+.calendar-icon {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.85;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.hour-slot .calendar-icon { width: 17px; height: 17px; opacity: 0; color: #7e49a9; }
+.hour-slot:is(:hover, :focus-visible) { background: #f0ddff9c; }
+.hour-slot:is(:hover, :focus-visible) .calendar-icon { opacity: 1; }
+.hour-slot:focus-visible { outline: 3px solid #fd75b9; outline-offset: -3px; }
 
 .calendar-day .hour-slot + .hour-slot {
     border-left: 1px solid #e5d0f3;
@@ -83,4 +102,81 @@
         font-size: 13px;
     }
     .calendar-day .avatar { width: 23px; height: 23px; }
+}
+
+.event-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(540px, calc(100% - 26px));
+    max-width: none;
+    max-height: min(88dvh, 840px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 24px;
+    border: 1px solid #debdf4;
+    border-radius: 27px;
+    background: #faefff;
+    color: #3d185c;
+    box-shadow: 0 30px 70px #36144d55;
+    font: 15px/1.55 "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+}
+
+.event-dialog::backdrop { background: #38194c99; backdrop-filter: blur(3px); }
+.event-dialog header { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.event-dialog h2 { margin-top: 4px; font-size: 22px; line-height: 1.24; font-weight: 700; letter-spacing: -.6px; }
+.event-dialog button { cursor: pointer; }
+.event-dialog :focus-visible { outline: 3px solid #fd75b9; outline-offset: 3px; }
+
+.event-dialog .dialog-close {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dac0f3;
+    border-radius: 14px;
+    color: #7545b2;
+    background: #f9efff;
+}
+
+.event-dialog .dialog-close:hover { background: #ffe1f1; }
+.event-dialog .field-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.event-dialog label { display: grid; gap: 6px; margin: 8px 0; color: #69398b; font-size: 13px; font-weight: 800; }
+.event-dialog input, .event-dialog select {
+    min-width: 0;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #d9bceb;
+    border-radius: 11px;
+    color: #3d185c;
+    background: #fff9ff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.event-dialog footer { display: flex; justify-content: flex-end; margin-top: 21px; }
+.event-dialog footer button {
+    padding: 12px 18px;
+    border: 1px solid #dcb8f5;
+    border-radius: 13px;
+    color: #6e31a4;
+    background: #f4e1ff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .event-dialog[open] { animation: event-dialog-in .2s ease; }
+    @keyframes event-dialog-in {
+        from { opacity: .4; transform: translateY(12px) scale(.98); }
+        to { opacity: 1; transform: none; }
+    }
+}
+
+@media (max-width: 450px) {
+    .event-dialog { padding: 16px; }
+    .event-dialog .field-pair { gap: 7px; }
+    .event-dialog input, .event-dialog select { padding-inline: 8px; font-size: 16px; }
+    .event-dialog footer button { min-height: 42px; padding-inline: 10px; }
 }
