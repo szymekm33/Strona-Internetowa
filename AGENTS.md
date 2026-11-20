@@ -12,6 +12,12 @@ Projekt używa Next.js 16.4.6 (App Router), React, TypeScript i Tailwind CSS. Ka
 
 Lokalny kalendarz obejmuje dwa loginy, trzy widoki, trwały zapis, wolne terminy i plany uczelni. Wdrożenie na rzeczywisty hosting i sprawdzenie prywatnej subskrypcji AGH wymagają konfiguracji właściciela. Wymagania znajdują się w [planie kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
+### Przekazanie pracy na kolejny komputer — 2026-11-20
+
+- Wersję kalendarza z tej sesji zapisano w commicie `2d69b7e` („Calendar changes”). Sprawdzono dodanie wpisu przez jedno konto, edycję przez drugie i zachowanie danych po restarcie PHP i MariaDB. Import AGH przetestowano na syntetycznych plikach `.ics`.
+- Na nowym komputerze sprawdź, czy checkout zawiera ten commit. Po `npm ci` i uruchomieniu Docker Desktop wykonaj `npm run calendar:local`. Dane z laptopa są w lokalnym wolumenie Dockera, a hasła w ignorowanym pliku `.calendar-local/accounts.env`. Świeże uruchomienie na drugim komputerze tworzy osobną bazę i nowe lokalne hasła.
+- Przy wznowieniu użytkownik chciał zobaczyć bazę samodzielnie. Zacznij od pokazania mu tabel `events` i `event_participants` oraz sposobu odczytania uczestników jednego wydarzenia. Schemat jest w [backend/schema.sql](backend/schema.sql).
+
 Uwaga: na GitHubie może być starsza wersja `app/page.tsx` niż na komputerze użytkownika. Przed propozycją zmian sprawdź aktualny lokalny plik, zachowaj jego samodzielnie napisane fragmenty i nie nadpisuj ich bez uzgodnienia.
 
 ## Zatwierdzony zakres i decyzje na dziś (2026-10-31)
