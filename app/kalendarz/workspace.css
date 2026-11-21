@@ -196,6 +196,105 @@
     cursor: pointer;
     font-weight: 700;
 }
+.calendar-app .agh-settings {
+    min-width: 0;
+    margin: 12px 0 0;
+    padding: 0;
+    border: 0;
+    display: grid;
+    gap: 12px;
+}
+.agh-settings h3 {
+    font-size: 16px;
+    font-weight: 750;
+}
+.agh-settings p {
+    margin: 0;
+}
+.agh-settings .agh-copy,
+.agh-course-count {
+    color: #734d8b;
+    font-size: 13px;
+    font-weight: 400;
+}
+.agh-intro {
+    display: grid;
+    gap: 6px;
+}
+.agh-settings .agh-count {
+    color: #713e9c;
+    font-weight: 750;
+}
+.agh-save-status {
+    min-height: 20px;
+    font-size: 13px;
+    color: #713e9c;
+}
+.agh-course-list {
+    display: grid;
+    gap: 8px;
+}
+.calendar-app .agh-course,
+.calendar-app .agh-section {
+    min-width: 0;
+    padding: 9px 11px;
+    background: #f8eeff;
+    border: 1px solid #dfc4f4;
+    border-radius: 12px;
+}
+.agh-settings summary {
+    color: #713e9c;
+    font-size: 13px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+.agh-settings details[open] > summary {
+    margin-bottom: 8px;
+}
+.agh-course-count {
+    display: block;
+    margin-top: 4px;
+}
+.agh-terms {
+    margin-top: 10px;
+}
+.agh-term {
+    border-top: 1px solid #e8d4f6;
+    padding-top: 9px;
+    margin-top: 9px;
+}
+.agh-term-heading {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 13px;
+}
+.agh-term-heading > div {
+    display: grid;
+    gap: 2px;
+}
+.agh-term-state {
+    border-radius: 100px;
+    padding: 4px 8px;
+    background: #e9d5ff;
+    color: #713e9c;
+    font-size: 12px;
+    font-weight: 750;
+}
+.agh-term-state[data-included="false"] {
+    background: #ffe4f3;
+    color: #a52c71;
+}
+.agh-source > .btn,
+.agh-source > .agh-copy {
+    margin-top: 8px;
+}
+.agh-settings select,
+.agh-settings input[type="file"] {
+    max-width: 100%;
+}
 .calendar-login {
     max-width: 390px;
     background: #f8eafe;

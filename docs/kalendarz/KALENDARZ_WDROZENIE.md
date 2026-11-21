@@ -13,6 +13,12 @@ Otwórz lokalnie [prototyp HTML](../../design/reference/razem-kalendarz-prototyp
 - Miesiąc pokazuje liczby wpisów osobistych i wspólnych oraz ważne daty. Kliknięcie daty rozwija listę z godzinami i przejście do dnia.
 - Pole „Zajmuje czas” decyduje o dostępności. Filtrowanie widoku nie zmienia zajętości. Pominięty termin jej nie blokuje.
 
+### Czytelność ustawień AGH — 2026-11-20
+
+Na prośbę użytkownika uproszczono panel „Uczelnie → AGH”. Główna lista pokazuje przedmioty i liczbę terminów w kalendarzu. Rozwinięty przedmiot rozdziela „Cały przedmiot” od „Ten jeden termin”, używa poleceń „Pokaż” i „Pomiń” oraz pokazuje wynik „W kalendarzu” lub „Pomijany”. Opcja domyślna podaje bieżący wynik ogólniejszego ustawienia, np. „Domyślnie: pokaż” i „Jak przedmiot: pomiń”. Zapisane wyjątki terminów nadal mają pierwszeństwo.
+
+Ustawienia rodzajów zajęć oraz pobieranie planu są osobnymi rozwijanymi sekcjami. Znane skróty rodzajów mają pełne nazwy z referencji. Panel informuje o natychmiastowym zapisie dla obu kont i wpływie pomijania na „Wolne razem”. Przycisk „Pobierz aktualny plan z AGH” oznacza ręczne pobranie subskrypcji; wczytanie `.ics` z komputera pozostaje osobną akcją. Zmiana dotyczy układu i opisów; zachowuje model danych, uprawnienia i logikę wyborów. Kolory, karty i kontrolki korzystają z wzorca wizualnego kalendarza.
+
 ## Eksport i hosting
 
 Lokalnie sprawdzono `output: "export"` i `trailingSlash: true` w `next.config.ts`. `npm run build` generuje `out`, a `py -m http.server 8000 --directory out` pozwala przetestować wejście na `/kalendarz/` z menu i bezpośrednio oraz odświeżenie. Konfigurację trzeba jeszcze zapisać w repozytorium. Wgrywaj zawartość `out` do katalogu strony, a schemat SQL importuj w phpMyAdmin. Produkcyjne poświadczenia bazy przechowuj po stronie PHP poza repozytorium. Obsługę crona i połączeń HTTPS wychodzących potwierdź przed automatyzacją importu AGH.

@@ -60,6 +60,7 @@ Powyższe ćwiczenia opisują wcześniejszy etap pracy nad interfejsem.
 - [x] Dodać instrukcję lokalnej instalacji i uruchomienia.
 - [x] Sprawdzić scenariusze lokalnie na syntetycznych wpisach.
 - [x] Dodać widoki tygodnia i miesiąca, filtry, wyszukiwanie wolnego, serie UR/UKEN i import AGH. Import testowano na plikach iCalendar.
+- [x] Uprościć panel ustawień AGH: osobno cały przedmiot i pojedyncza data, polecenia „Pokaż” / „Pomiń”, widoczne wyniki ustawień domyślnych i liczby terminów, pełne nazwy rodzajów oraz informacja o obu kontach. Pobieranie subskrypcji i wczytanie pliku opisano oddzielnie. W Chrome na syntetycznym API sprawdzono wybory rodzajów/przedmiotów/terminów i usuwanie wyjątków, oba konta, klawiaturę oraz brak poziomego przewijania przy 1280×800 i 390×844. Obejrzano zrzuty panelu. ESLint, TypeScript i cztery istniejące testy logiki przeszły; prawdziwe dane i ustawienia użytkownika nie były zmieniane.
 - [ ] Sprawdzić prywatną subskrypcję AGH i wdrożenie HTTPS na hostingu docelowym.
 
 ### Kryteria odbioru etapu 1
