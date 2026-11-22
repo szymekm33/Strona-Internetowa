@@ -12,6 +12,8 @@ Projekt używa Next.js 16.4.6 (App Router), React, TypeScript i Tailwind CSS. Ka
 
 Lokalny kalendarz obejmuje dwa loginy, trzy widoki, trwały zapis, wolne terminy i plany uczelni. Wdrożenie na rzeczywisty hosting i sprawdzenie prywatnej subskrypcji AGH wymagają konfiguracji właściciela. Wymagania znajdują się w [planie kalendarza](docs/kalendarz/KALENDARZ_WDROZENIE.md).
 
+Aktualizacja 2026-11-22: logowanie poprzedza całą stronę, w tym Start i wszystkie bezpośrednie linki. `AuthProvider` we wspólnym layoucie udostępnia sesję kalendarzowi i ukrywa menu przed logowaniem. Apache/PHP sprawdza sesję przed podaniem HTML i eksportowanych danych React; wymagane są `out/.htaccess`, oba publiczne pliki `api/*.php` oraz prywatne `backend/site.php` i `backend/session.php`. Pełną ochronę lokalną sprawdzaj pod `localhost:8088`; port 3000 jest podglądem programistycznym interfejsu.
+
 ### Przekazanie pracy na kolejny komputer — 2026-11-20
 
 - Wersję kalendarza z tej sesji zapisano w commicie `2d69b7e` („Calendar changes”). Sprawdzono dodanie wpisu przez jedno konto, edycję przez drugie i zachowanie danych po restarcie PHP i MariaDB. Import AGH przetestowano na syntetycznych plikach `.ics`.

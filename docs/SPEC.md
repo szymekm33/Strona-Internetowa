@@ -8,6 +8,8 @@ Stan na 2026-10-31. Dokument zbiera ustalenia produktu. Szczegóły techniczne i
 
 Prywatna strona dla dwóch osób, z oddzielnymi kontami. Rejestracja nie jest otwarta. Dostęp do danych i zdjęć mają wyłącznie uprawnieni, zalogowani użytkownicy.
 
+Ustalenie z 2026-11-22: formularz logowania poprzedza całą stronę, również Start i bezpośrednie adresy podstron. Po jednym zalogowaniu użytkownik może przechodzić między zakładkami. Wylogowanie zamyka dostęp do całego interfejsu. Sesję sprawdza także PHP przed wydaniem dokumentów i danych aplikacji.
+
 Głównym urządzeniem jest komputer; interfejs ma być użyteczny także na telefonie. Styl: minimalistyczny, przyjazny, osobisty, z kolorem i dobrymi ustawieniami domyślnymi. Zatwierdzono paletę kolorów, model nawigacji i część interakcji kalendarza. Szczegóły zapisano w [UI_UX.md](UI_UX.md); pozostałe zachowania konkretnych ekranów pozostają do doprojektowania.
 
 ### Wspólna przestrzeń i wygląd

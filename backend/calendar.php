@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/events.php';
+require_once __DIR__ . '/session.php';
 date_default_timezone_set('Europe/Warsaw');
 
 function database(array $cfg): PDO {
@@ -52,11 +53,7 @@ if ($local && in_array($origin,['http://localhost:3000','http://127.0.0.1:3000']
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
 
 try {
-    ini_set('session.use_strict_mode','1');
-    session_name('razem_calendar');
-    session_set_cookie_params(['path'=>'/','httponly'=>true,'secure'=>!$local,'samesite'=>'Strict']);
-    session_start();
-    $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
+    startSiteSession();
     $method = $_SERVER['REQUEST_METHOD'];
     if (!in_array($method,['GET','POST'],true)) fail('Niedozwolona metoda.',405);
     $d = [];
@@ -73,8 +70,8 @@ try {
         session_regenerate_id(true);
         $_SESSION['csrf'] = bin2hex(random_bytes(32));
     }
-    if ($action !== 'load' && $action !== 'logout' && $action !== 'login' && empty($_SESSION['user'])) fail('Zaloguj się ponownie.',401);
-    if ($action === 'login' || !empty($_SESSION['user'])) {
+    if ($action !== 'load' && $action !== 'logout' && $action !== 'login' && !isSiteUser()) fail('Zaloguj się ponownie.',401);
+    if ($action === 'login' || isSiteUser()) {
         $cfg = $local ? ['dsn'=>'mysql:host=database;dbname=razem;charset=utf8mb4','db_user'=>'razem','db_password'=>getenv('DB_PASSWORD')] : require __DIR__.'/config.php';
         $db = database($cfg);
         if ($action === 'login') login($db,$cfg,$d,$local);
@@ -109,7 +106,7 @@ try {
         $state = snapshot($db);
         $db->commit();
     }
-    echo json_encode(['user'=>$_SESSION['user'] ?? null,'csrf'=>$_SESSION['csrf'],'calendar'=>$state ?? null],JSON_THROW_ON_ERROR);
+    echo json_encode(['user'=>isSiteUser() ? $_SESSION['user'] : null,'csrf'=>$_SESSION['csrf'],'calendar'=>$state ?? null],JSON_THROW_ON_ERROR);
 } catch (Throwable $e) {
     if (isset($db) && $db->inTransaction()) $db->rollBack();
     $expected = $e instanceof DomainException;

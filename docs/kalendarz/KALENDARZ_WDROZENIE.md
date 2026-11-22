@@ -21,7 +21,7 @@ Ustawienia rodzajów zajęć oraz pobieranie planu są osobnymi rozwijanymi sekc
 
 ## Eksport i hosting
 
-Lokalnie sprawdzono `output: "export"` i `trailingSlash: true` w `next.config.ts`. `npm run build` generuje `out`, a `py -m http.server 8000 --directory out` pozwala przetestować wejście na `/kalendarz/` z menu i bezpośrednio oraz odświeżenie. Konfigurację trzeba jeszcze zapisać w repozytorium. Wgrywaj zawartość `out` do katalogu strony, a schemat SQL importuj w phpMyAdmin. Produkcyjne poświadczenia bazy przechowuj po stronie PHP poza repozytorium. Obsługę crona i połączeń HTTPS wychodzących potwierdź przed automatyzacją importu AGH.
+Konfiguracja `output: "export"` i `trailingSlash: true` jest zapisana w `next.config.ts`. `npm run build` generuje `out`. Od 2026-11-22 logowanie chroni całą stronę, dlatego eksport testuj przez Apache/PHP z regułami `out/.htaccess` (lokalnie `npm run calendar:local`, port 8088). Wgrywaj zawartość `out` razem z ukrytym `.htaccess` do katalogu strony, a schemat SQL importuj w phpMyAdmin. Prywatne pliki PHP i produkcyjne poświadczenia bazy umieść poza katalogiem publicznym zgodnie z instrukcją uruchomienia. Obsługę `mod_rewrite`, crona i połączeń HTTPS wychodzących potwierdź na hostingu.
 
 ## Kolejność prac
 

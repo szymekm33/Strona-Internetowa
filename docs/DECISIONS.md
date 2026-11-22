@@ -21,6 +21,7 @@ Stan na 2026-10-31. Odróżniamy ustalenia produktu od roboczej kolejności impl
 | D-011 | Wiele kalendarzy (m.in. AGH, wspólny, ważne daty), domyślnie połączony widok wszystkich i możliwość filtrowania. „Wspólny” to osobny kalendarz, a nie agregat. |
 | D-012 | Next.js, React, TypeScript i Tailwind CSS jako frontend eksportowany statycznie. Hosting kolegi obsługuje PHP bez konsoli. Backend w PHP, baza MySQL lub MariaDB dostępna przez phpMyAdmin. |
 | D-013 | Użytkownik uczy się programowania poprzez wspólne pisanie z Codexem. Najpierw małe kroki interfejsu, później prototyp kalendarza i po doprecyzowaniu modelu danych — trwały zapis i logowanie. |
+| D-014 | 2026-11-22: logowanie jest wspólne dla całej strony i wymagane przed pokazaniem Startu, menu lub dowolnej podstrony. Istniejące dwa konta i sesje PHP pozostają wspólne; po logowaniu wracamy do żądanego wewnętrznego adresu. Apache/PHP chroni także statycznie eksportowane dokumenty i dane React. |
 
 ## Plan roboczy
 

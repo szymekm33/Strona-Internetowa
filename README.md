@@ -4,7 +4,7 @@ Prywatna strona dla Szymka i jego dziewczyny: wspólny kalendarz, wspomnienia, c
 
 ## Stan projektu
 
-**Kalendarz ma działającą wersję lokalną z dwoma kontami, PHP i MariaDB.** Po uruchomieniu Docker Desktop wykonaj `npm run calendar:local`. Adres, dostęp do lokalnych kont oraz sposób wdrożenia na hosting opisuje [uruchomienie kalendarza](docs/kalendarz/URUCHOMIENIE.md).
+**Strona wymaga zalogowania przed wejściem na dowolną podstronę. Kalendarz ma działającą wersję lokalną z dwoma kontami, PHP i MariaDB.** Po uruchomieniu Docker Desktop wykonaj `npm run calendar:local` i otwórz `http://localhost:8088/`. Dostęp do lokalnych kont oraz sposób wdrożenia na hosting opisuje [uruchomienie kalendarza](docs/kalendarz/URUCHOMIENIE.md).
 
 Frontend działa w Next.js 16.4.6, React, TypeScript i Tailwind CSS. Sidebar prowadzi do ośmiu ekranów i obsługuje klawiaturę oraz telefon. Kalendarz obejmuje dzień, tydzień i miesiąc, wspólny zapis wydarzeń, wolne terminy oraz plany uczelni. Pozostałe zakładki są na etapie szkieletu.
 
@@ -30,4 +30,4 @@ Roboczy zakres pierwszego etapu:
 
 „Plan główny” służy koordynacji. Szczegóły ustalamy w czatach tematycznych, a aktualne decyzje zapisujemy w tym repozytorium. Codex korzysta z dokumentacji przy implementacji.
 
-Uruchomienie lokalne: zainstaluj Node.js, wykonaj `npm ci`, następnie `npm run dev` i otwórz `http://localhost:3000`. Przed zmianami z Codexem sprawdź `AGENTS.md` oraz `docs/TASKS.md`. Projekt ma służyć także nauce samodzielnego programowania.
+Uruchomienie lokalne: zainstaluj Node.js i Docker Desktop, wykonaj `npm ci`, następnie `npm run calendar:local` i otwórz `http://localhost:8088/`. `npm run dev` pod portem 3000 służy do pracy nad interfejsem; ochronę dokumentów przez PHP testuj na porcie 8088. Przed zmianami z Codexem sprawdź `AGENTS.md` oraz `docs/TASKS.md`. Projekt ma służyć także nauce samodzielnego programowania.

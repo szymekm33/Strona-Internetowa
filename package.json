@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "test:calendar": "node --test tests/calendar.test.mjs",
+    "test:auth": "node --test tests/site-session.test.mjs tests/site-auth.test.mjs",
     "calendar:local": "node scripts/calendar-local.mjs",
     "dev": "next dev",
     "build": "next build",

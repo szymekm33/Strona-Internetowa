@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./components/Sidebar";
+import AuthProvider from "./components/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,17 +21,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#E9D5FF] text-[#3D185C] font-sans">
-        <Sidebar />
-
-        <div className="page-content ml-[76px] flex flex-1 flex-col">
-
-          {children}
-
-        </div>
+        <AuthProvider>{children}</AuthProvider>
       </body>
 
 
